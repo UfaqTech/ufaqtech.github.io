@@ -71,7 +71,7 @@
 
 <div align="center">
 
-[![🌍 Live Portfolio](https://img.shields.io/badge/-Live%20Portfolio-0a192f?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://ufaqtech.github.io/awais.github.io)
+[![🌍 Live Portfolio](https://img.shields.io/badge/-Live%20Portfolio-0a192f?style=for-the-badge&logo=Google-Chrome&logoColor=white)](https://ufaqtech.github.io/awais.github.io/)
 
 [![👨‍💻 GitHub Profile](https://img.shields.io/badge/-GitHub%20Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/UfaqTech)
 
@@ -98,7 +98,7 @@
 ## 🧠 Featured Projects
 
 | Project | Description | Demo |
-|--------|-------------|------|
+|---------|-------------|------|
 | **Portfolio Website** | Fully responsive personal website built using HTML, CSS, JS, GitHub Pages | [🔗 View Site](https://ufaqtech.github.io/awais.github.io/) |
 | **Next Project** | Coming soon: Advanced full-stack app in React/Node | [🚧 In Progress](https://github.com/UfaqTech) |
 
@@ -106,10 +106,12 @@
 
 ## 🤝 Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/awais-nawaz-12b19b330)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/awais-nawaz-52b643315)
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/Ufaq_Tech)
+[![Telegram](https://img.shields.io/badge/-Telegram-0088cc?style=flat&logo=telegram&logoColor=white)](https://t.me/UfaqTech)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/UfaqTech)
 [![Portfolio](https://img.shields.io/badge/-Portfolio-0a192f?style=flat&logo=Google-Chrome&logoColor=white)](https://ufaqtech.github.io/awais.github.io/)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:mawais03415942806@gmail.com)
-
 ---
 
 <p align="center">💡 "Code is not just syntax. It's the art of solving problems efficiently."</p>
