@@ -1,0 +1,3 @@
+User-agent: *
+  Allow: /
+  Sitemap: https://m-awais17.github.io/awais.github.io/sitemap.xml
