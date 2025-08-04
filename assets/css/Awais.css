@@ -11936,52 +11936,99 @@ pre .code {
   color: #fff;
 }
 
-/* globe bg  */
 
- #glob {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 215px;
-      width: 215px;
-      background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
-      border-radius: 50%;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.7;
+/* Globe background glow */
+#glob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 320px);
+    height: min(90vw, 320px);
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* 3D Earth Canvas */
+#earthCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 300px);
+    height: min(90vw, 300px);
+    z-index: 2;
+}
+
+/* Small Android / Mobile Phones */
+
+@media (max-width: 360px) {
+    #glob {
+        width: 100px;
+        height: 100px;
     }
 
     #earthCanvas {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
+        width: 80px;
+        height: 80px;
     }
-    
+}
+/* Small Mobile Phones */
 
-    @media (min-width: 768px) {
-      #earthCanvas {
-        height: 300px;
+@media (max-width: 480px) {
+    #glob {
+        width: 150px;
+        height: 150px;
+    }
+
+    #earthCanvas {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    #glob {
         width: 300px;
-      }
-      #glob {
-        height: 315px;
-        width: 315px;
-      }
+        height: 300px;
     }
 
-    @media (min-width: 1024px) {
-      #earthCanvas {
-        height: 400px;
-        width: 400px;
-      }
-      #glob {
-        height: 415px;
-        width: 415px;
-      }
+    #earthCanvas {
+        width: 250px;
+        height: 250px;
     }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #glob {
+        width: 415px;
+        height: 415px;
+    }
+
+    #earthCanvas {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    #glob {
+        width: 500px;
+        height: 500px;
+    }
+
+    #earthCanvas {
+        width: 480px;
+        height: 480px;
+    }
+}
+
 
 
 
