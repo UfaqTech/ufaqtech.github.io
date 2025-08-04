@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UHT - Interactive Toolkit Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body class="text-slate-800">
+
+    <div class="main-container flex">
+        <!-- Sidebar -->
+        <aside class="sidebar text-white flex flex-col">
+            <div class="flex items-center justify-center p-6 border-b border-slate-700">
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold text-white">UHT 🛡️</h1>
+                    <p class="text-sm text-slate-400">Ufaq Hacking Toolkit</p>
+                    <p class="text-xs text-slate-500 mt-1">by Awais Nawaz (UfaqTech)</p>
+                </div>
+            </div>
+            <nav id="category-nav" class="flex-grow p-4 space-y-2 overflow-y-auto">
+                <!-- Category links will be dynamically inserted here -->
+            </nav>
+            <div class="p-4 border-t border-slate-700 text-center text-xs text-slate-500">
+                Version 1.0.0
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content-wrapper bg-slate-50 p-4 sm:p-6 lg:p-8">
+            <div class="max-w-7xl mx-auto">
+                <header class="mb-8 flex items-center gap-4">
+                    <!-- Sidebar Toggle Button (visible on small screens) -->
+                    <button id="sidebar-toggle-btn" class="lg:hidden p-2 rounded-md hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900">Cybersecurity Tools Dashboard</h2>
+                        <p class="mt-2 text-slate-600">Explore, filter, and manage a comprehensive suite of security tools.</p>
+                    </div>
+                </header>
+
+                <!-- Filters -->
+                <div class="bg-white p-4 rounded-lg shadow-sm mb-8 flex flex-col md:flex-row gap-4 items-center">
+                    <div class="relative flex-grow w-full">
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="search-input" placeholder="Search tools by name, description, etc..." class="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                    </div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-sm font-medium text-slate-600 mr-2">Filter by OS:</span>
+                        <button class="os-filter-btn px-3 py-1 text-sm border border-slate-300 rounded-full hover:bg-slate-100 transition" data-os="linux">Linux 🐧</button>
+                        <button class="os-filter-btn px-3 py-1 text-sm border border-slate-300 rounded-full hover:bg-slate-100 transition" data-os="windows">Windows 🪟</button>
+                        <button class="os-filter-btn px-3 py-1 text-sm border border-slate-300 rounded-full hover:bg-slate-100 transition" data-os="macos">macOS 🍏</button>
+                        <button class="os-filter-btn px-3 py-1 text-sm border border-slate-300 rounded-full hover:bg-slate-100 transition" data-os="termux">Termux 📱</button>
+                    </div>
+                </div>
+
+                <!-- Tool Grid -->
+                <div id="tool-grid-container">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 id="current-category-title" class="text-xl font-semibold text-slate-800">All Tools</h3>
+                        <p id="tool-count" class="text-sm text-slate-500"></p>
+                    </div>
+                    <div id="tool-grid" class="grid gap-6">
+                        <!-- Tool cards will be dynamically inserted here -->
+                    </div>
+                    <div id="no-results" class="hidden text-center py-12">
+                        <p class="text-slate-500 text-lg">No tools found matching your criteria.</p>
+                        <button id="clear-filters-btn" class="mt-4 px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 transition">Clear All Filters</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="tool-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div id="modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col relative transform transition-all duration-300 scale-95 opacity-0">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between p-5 border-b border-slate-200">
+                <h3 id="modal-title" class="text-2xl font-bold text-slate-900"></h3>
+                <button id="modal-close-btn" class="p-2 rounded-full hover:bg-slate-100">
+                    <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div id="modal-body" class="p-6 overflow-y-auto space-y-6">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>

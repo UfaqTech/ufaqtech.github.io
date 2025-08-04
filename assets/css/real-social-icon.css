@@ -1,0 +1,39 @@
+.social-icons {
+  list-style: none;
+  padding-left: 0;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 170px; /* ⬅️ Container width reduced */
+  margin: 30px auto;
+}
+
+.social-icons .social-link {
+  font-size: 16px;       /* ⬅️ Smaller icon size */
+  width: 30px;           /* ⬅️ Smaller button size */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Brand Background Colors */
+.social-link.facebook     { background-color: #1877f2; }
+.social-link.x-twitter    { background-color: #000000; }
+.social-link.linkedin     { background-color: #0a66c2; }
+.social-link.github       { background-color: #333333; }
+.social-link.instagram    { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-link.tiktok       { background-color: #010101; }
+.social-link.email        { background-color: #d44638; }
+.social-link.telegram     { background-color: #229ED9; }
+.social-link.whatsapp     { background-color: #25d366; }
+
+.social-link:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}

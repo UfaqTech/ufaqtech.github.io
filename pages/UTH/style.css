@@ -1,0 +1,135 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Main container: grid layout */
+.main-container {
+    display: grid;
+    grid-template-columns: 0px 1fr; /* Sidebar closed by default */
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative; /* Ensures child elements follow layout */
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* Open sidebar state on desktop */
+.main-container.sidebar-open-desktop {
+    grid-template-columns: 280px 1fr; /* Show sidebar */
+}
+/* Sidebar styles */
+.sidebar {
+    background-color: #1e293b;
+    width: 280px;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    z-index: 40;
+    position: relative; /* Let it live inside container layout */
+    transform: translateX(0); /* Default position when visible */
+}
+
+/* Hide sidebar when closed */
+.main-container.sidebar-closed .sidebar {
+    transform: translateX(-280px); /* Slide out of view */
+}
+
+/* Main content */
+.main-content-wrapper {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Toggle button visible everywhere */
+#sidebar-toggle-btn {
+    display: block;
+    cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Tool grid */
+#tool-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar link */
+.sidebar-link.active {
+    background-color: #334155;
+    border-left: 4px solid #14b8a6;
+}
+
+/* Filter button */
+.os-filter-btn.active {
+    background-color: #14b8a6;
+    color: white;
+    border-color: #14b8a6;
+}
+
+/* Modal */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+.copy-btn-icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+.copied-text {
+    color: #10b981;
+}
+
+
+/* For mobile: fixed sidebar and push effect */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        transform: translateX(-250px);
+        z-index: 50;
+    }
+
+    .main-container.sidebar-open-mobile .sidebar {
+        transform: translateX(0); /* Slide in */
+    }
+
+    .main-container.sidebar-open-mobile .main-content-wrapper {
+        margin-left: 250px; /* Push content over */
+    }
+
+    .main-container.sidebar-closed {
+        grid-template-columns: 1fr; /* Full width for content */
+    }
+}
+
+/* Main content stays fluid */
+.main-content-wrapper {
+    width: 100%;
+    padding: 1rem;
+    transition: margin-left 0.3s ease-in-out;
+}

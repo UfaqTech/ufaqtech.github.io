@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UHT-Framework: Advanced Ethical Hacking & Cybersecurity Toolkit</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="UHT-Framework is a comprehensive, multi-OS ethical hacking and penetration testing toolkit. Discover advanced cybersecurity tools for network firewalls, WAFs, EDR, SIEM, vulnerability scanning, exploitation, OSINT, and more. Empowering security professionals with cutting-edge open-source and commercial solutions.">
+    <meta name="keywords" content="UHT-Framework, ethical hacking, penetration testing, cybersecurity tools, hacking toolkit, vulnerability scanner, OSINT, exploit development, cross-platform hacking, CLI hacking tool, UfaqTech, security research, cyber security, open-source hacking tools, network firewall, WAF, EDR, SIEM, SOAR, NAC, HIDS, IPS, IDS, VPN, identity management, PAM, malware analysis, web fuzzer, privilege escalation, social engineering, password cracking, WiFi security, FortiGate, Palo Alto, Cisco ASA, pfSense, ModSecurity, Snort, Suricata, Zeek, Wireshark, tcpdump, Security Onion, OpenVPN, WireGuard, Pi-hole, CrowdStrike, Microsoft Defender, SentinelOne, Carbon Black, Sophos Intercept X, Bitdefender, Windows Defender, Malwarebytes, Avast, Kaspersky, Norton, Tripwire, OSSEC, Wazuh, Nessus, OpenVAS, Qualys, Nexpose, Burp Suite, OWASP ZAP, Acunetix, Invicti, SQLMap, Metasploit, Evil-WinRM, Pwncat, Cobalt Strike, BloodHound, Immunity Debugger, OllyDbg, GoBuster, Wfuzz, Arjun, W3af, BeEF, LinPEAS, WinPEAS, PEASS-ng, GTFOBins, HackTricks, Msfvenom, PoshC2, SecLists, Rockyou, SocialFish, Setoolkit, GoPhish, John the Ripper, Hashcat, Hydra, Aircrack-ng, Splunk, IBM QRadar, Microsoft Sentinel, Elastic SIEM, ArcSight, LogRhythm, Cortex XSOAR, Phantom, IBM Resilient, Swimlane, Okta, Azure AD, Ping Identity, Auth0, Duo Security, CyberArk, Delinea, BeyondTrust, HashiCorp Vault">
+    <meta name="author" content="UfaqTech">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/ (Replace with your actual domain)">
+    <meta property="og:title" content="UHT-Framework: Advanced Ethical Hacking & Cybersecurity Toolkit">
+    <meta property="og:description" content="UHT-Framework is a comprehensive, multi-OS ethical hacking and penetration testing toolkit. Discover advanced cybersecurity tools for network firewalls, WAFs, EDR, SIEM, vulnerability scanning, exploitation, OSINT, and more. Empowering security professionals with cutting-edge open-source and commercial solutions.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a202c/00FFFF?text=UHT-Framework%20|%20Cybersecurity%20Toolkit"> <!-- Placeholder image, replace with your logo/banner -->
+
+    <!-- Tailwind CSS CDN -->
+
+    <link rel="stylesheet" href="cnd.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="/vendors/themify-icons/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl-Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
+
+    <!-- Three.js Background Canvas -->
+    <canvas id="three-bg" class="fixed inset-0 w-full h-full -z-10"></canvas>
+
+    <!-- Header -->
+    <header class="bg-gray-800 bg-opacity-70 backdrop-blur-sm p-4 sticky top-0 z-50 shadow-lg rounded-b-xl mx-auto max-w-7xl mt-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition duration-300 ease-in-out">UfaqTech Hacking Toolkit</a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="nav-link text-lg hover:text-teal-400 transition duration-300 ease-in-out">Home</a></li>
+                <li><a href="#features" class="nav-link text-lg hover:text-teal-400 transition duration-300 ease-in-out">Features</a></li>
+                <li><a href="#tools" class="nav-link text-lg hover:text-teal-400 transition duration-300 ease-in-out">Tools</a></li>
+                <li><a href="#about" class="nav-link text-lg hover:text-teal-400 transition duration-300 ease-in-out">About</a></li>
+                <li><a href="#contact" class="nav-link text-lg hover:text-teal-400 transition duration-300 ease-in-out">Contact</a></li>
+                <li class="scroll-to-section"><div class="border-first-button"><a href="../../index.html">Credit To</a></div></li> 
+            </ul>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-3xl text-white focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="flex flex-col space-y-8 text-3xl">
+            <li><a href="#home" class="mobile-nav-link text-white hover:text-teal-400 transition duration-300 ease-in-out">Home</a></li>
+            <li><a href="#features" class="mobile-nav-link text-white hover:text-teal-400 transition duration-300 ease-in-out">Features</a></li>
+            <li><a href="#tools" class="mobile-nav-link text-white hover:text-teal-400 transition duration-300 ease-in-out">Tools</a></li>
+            <li><a href="#about" class="mobile-nav-link text-white hover:text-teal-400 transition duration-300 ease-in-out">About</a></li>
+            <li><a href="#contact" class="mobile-nav-link text-white hover:text-teal-400 transition duration-300 ease-in-out">Contact</a></li>
+            <li class="scroll-to-section"><div class="border-first-button"><a href="../../index.html">Credit To</a></div></li> 
+        </ul>
+    </div>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-8 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 animate-text-reveal">
+                    <span class="text-teal-400">UHT-Framework:</span> Your Advanced Ethical Hacking Toolkit
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-10 animate-fade-in-up delay-700">
+                    A comprehensive, multi-OS cybersecurity framework for penetration testing and ethical hacking. Empowering security professionals with cutting-edge tools.
+                </p>
+                <a href="https://github.com/UfaqTech/UHT-Framework" target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out animate-fade-in-up delay-1000">
+                    Explore on GitHub <i class="fab fa-github ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 px-8 bg-gradient-to-br from-gray-900 to-gray-800 animate-gradient-shift">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-teal-400 animate-fade-in-up">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Feature Card 1 -->
+                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry">
+                        <i class="fas fa-laptop-code text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Multi-OS Compatibility</h3>
+                        <p class="text-gray-300">Seamlessly runs on Linux (Debian/Ubuntu, Arch, Termux), macOS, and Windows, providing a consistent experience across diverse environments.</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry delay-100">
+                        <i class="fas fa-cogs text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Dynamic Tool Management</h3>
+                        <p class="text-gray-300">All tools are defined and managed through a centralized `tools.json` file, allowing for easy updates and customization.</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry delay-200">
+                        <i class="fas fa-sync-alt text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Automated Updates</h3>
+                        <p class="text-gray-300">Keep your toolkit current with automated installation of dependencies and one-command updates for tools and the framework itself.</p>
+                    </div>
+                    <!-- Feature Card 4 -->
+                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry delay-300">
+                        <i class="fas fa-terminal text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Intuitive CLI</h3>
+                        <p class="text-gray-300">Experience a clean, color-coded, and user-friendly command-line interface designed for efficiency and ease of use.</p>
+                    </div>
+                     <!-- Feature Card 5 -->
+                     <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry delay-400">
+                        <i class="fas fa-shield-alt text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Comprehensive Security Modules</h3>
+                        <p class="text-gray-300">Includes modules for reconnaissance, exploitation, vulnerability scanning, and post-exploitation, covering a wide range of security tasks.</p>
+                    </div>
+                     <!-- Feature Card 6 -->
+                     <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-card-entry delay-500">
+                        <i class="fas fa-file-alt text-5xl text-teal-400 mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Detailed Logging</h3>
+                        <p class="text-gray-300">All actions performed within the framework are meticulously logged, aiding in troubleshooting, analysis, and compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="py-20 px-8 bg-gray-800">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-teal-400 animate-fade-in-up">Comprehensive Toolset</h2>
+                <p class="text-xl text-gray-300 mb-10 animate-fade-in-up delay-100">
+                    The UHT-Framework integrates a vast array of cutting-edge tools, categorized for efficient cybersecurity operations.
+                </p>
+
+                <!-- Tool Categories Accordion -->
+                <div id="tool-accordion" class="max-w-5xl mx-auto text-left">
+                    <!-- Category: Network Firewalls & WAFs -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Network Firewalls & WAFs (9 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <!-- Tool Card -->
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Fortinet FortiGate <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Network Firewall. Not directly installable via UHT. Refer to Fortinet documentation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Palo Alto Networks Firewall <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Next-Generation Firewall. Refer to Palo Alto Networks documentation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Cisco ASA <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Adaptive Security Appliance (Firewall/VPN). Refer to Cisco documentation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Check Point Firewall <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Network Security Gateway. Refer to Check Point documentation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Sophos XG Firewall <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Next-Generation Firewall. Refer to Sophos documentation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">Cloudflare WAF <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Cloud-based Web Application Firewall. Managed via Cloudflare dashboard.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Akamai WAF <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Cloud-based Web Application Firewall. Managed via Akamai platform.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-350">
+                                    <h4 class="text-lg font-semibold text-teal-400">pfSense <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open source firewall/router software distribution. Typically installed as an OS.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-400">
+                                    <h4 class="text-lg font-semibold text-teal-400">OPNsense <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open source firewall/router software distribution, a fork of pfSense. Typically installed as an OS.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: IDS/IPS & Network Monitoring -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-100">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            IDS/IPS & Network Monitoring (7 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">ModSecurity <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open source Web Application Firewall (WAF) engine. Often integrated with Apache/Nginx.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Snort <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open Source Intrusion Prevention System (IPS) and Intrusion Detection System (IDS). Requires complex compilation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Suricata <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">High performance Network IDS, IPS and Network Security Monitoring engine. Requires complex compilation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Zeek (formerly Bro) <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Powerful network analysis framework that transforms network traffic into highly-detailed, scriptable logs.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Wireshark <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">The world’s foremost and widely used network protocol analyzer. Download from official site: <a href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://www.wireshark.org/</a></p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">tcpdump <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A powerful command-line packet analyzer. Often pre-installed on Linux/Unix systems.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Security Onion <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Free and open platform for threat hunting, enterprise security monitoring, and log management. Requires dedicated installation.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Network Access Control (NAC) & VPN -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-200">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Network Access Control (NAC) & VPN (6 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Cisco Identity Services Engine (ISE) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Network Access Control (NAC) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Fortinet FortiNAC <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Network Access Control (NAC) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">OpenVPN <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open-source software application that implements virtual private network (VPN) techniques.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">WireGuard <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Modern, fast, and secure VPN tunnel.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Cisco Umbrella (OpenDNS) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Cloud security platform that provides DNS-layer security. Managed via web console.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">Pi-hole <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A Linux network-level advertisement and Internet tracker blocking application. Requires Raspberry Pi or Linux server.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Endpoint Detection & Response (EDR) / Antivirus -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-300">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Endpoint Detection & Response (EDR) / Antivirus (12 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">CrowdStrike Falcon <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Highly demanded commercial EDR platform. Requires subscription and agent deployment.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Microsoft Defender for Endpoint (XDR) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Microsoft's enterprise endpoint security platform. Part of Microsoft 365 Defender. Built-in or deployed.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i> <i class="fab fa-apple"></i> <i class="fab fa-linux"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">SentinelOne <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial AI-powered EDR platform. Requires subscription.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Carbon Black (VMware) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial endpoint protection and EDR solution. Requires subscription.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Sophos Intercept X <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial endpoint protection with EDR and anti-ransomware. Requires subscription.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">Bitdefender GravityZone <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial endpoint security platform. Requires subscription.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Windows Defender <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Microsoft's built-in antivirus and endpoint protection for Windows.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-350">
+                                    <h4 class="text-lg font-semibold text-teal-400">Malwarebytes <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Popular anti-malware software. Download from official site: <a href="https://www.malwarebytes.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://www.malwarebytes.com/</a></p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-400">
+                                    <h4 class="text-lg font-semibold text-teal-400">Avast/AVG <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Popular antivirus software. Download from official sites.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-450">
+                                    <h4 class="text-lg font-semibold text-teal-400">Kaspersky <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial antivirus and internet security suite. Download from official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-500">
+                                    <h4 class="text-lg font-semibold text-teal-400">Norton <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial antivirus and internet security suite. Download from official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-550">
+                                    <h4 class="text-lg font-semibold text-teal-400">Tripwire <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial File Integrity Monitoring (FIM) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Host-based Intrusion Detection (HIDS) & Endpoint Management -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-400">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Host-based Intrusion Detection (HIDS) & Endpoint Management (5 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">OSSEC <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open Source Host-based Intrusion Detection System (HIDS). Complex installation/configuration.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-apple"></i> <i class="fab fa-windows"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Wazuh <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open Source Security Platform (HIDS, SIEM, XDR capabilities). Complex installation/configuration.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Microsoft Intune <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Mobile Device Management (MDM) and Endpoint Management solution. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Jamf Pro <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Apple device management (MDM) solution. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Wazuh (Open Source HIDS/SIEM) <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open Source Security Platform (HIDS, SIEM, XDR capabilities). Complex installation/configuration.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Vulnerability Scanners -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-500">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Vulnerability Scanners (7 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Nessus <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Proprietary vulnerability scanner developed by Tenable, Inc. Download from official site: <a href="https://www.tenable.com/products/nessus" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://www.tenable.com/products/nessus</a></p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">OpenVAS / GVM <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Vulnerability management platform with comprehensive scanning and reporting capabilities. Often deployed on Linux.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Qualys <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial cloud-based platform for vulnerability management and compliance. Managed via web console.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Nexpose (Rapid7) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial vulnerability management solution by Rapid7.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Burp Suite Community Edition <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Integrated platform for performing security testing of web applications. Download from official site: <a href="https://portswigger.net/burp/communitydownload" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://portswigger.net/burp/communitydownload</a></p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">OWASP ZAP <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open Source Web Application Security Scanner. Download from official site or install via package manager.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Acunetix <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial web vulnerability scanner.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Exploitation & Post-Exploitation -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-600">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Exploitation & Post-Exploitation (15 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">SQLMap <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Automatic SQL injection and database takeover tool.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Metasploit Framework <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">World's most used penetration testing framework. Installation can be lengthy and complex.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Evil-WinRM <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A WinRM shell for pentesters. Requires Ruby and specific gems.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Pwncat <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Netcat on steroids with a Python reverse shell and advanced features.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Cobalt Strike <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Red Team Operations and APT Simulation platform. Purchase and download from official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">BloodHound <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Active Directory reconnaissance and path enumeration tool. Requires Neo4j database.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Immunity Debugger <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A powerful, free debugger for malware analysis and exploit development (Windows only). Download from official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-350">
+                                    <h4 class="text-lg font-semibold text-teal-400">OllyDbg <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A 32-bit assembler level analyzing debugger for Microsoft Windows. Download from: <a href="http://www.ollydbg.de/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">http://www.ollydbg.de/</a></p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-400">
+                                    <h4 class="text-lg font-semibold text-teal-400">GoBuster <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Directory/file & DNS busting tool written in Go. Requires Go to be installed.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-450">
+                                    <h4 class="text-lg font-semibold text-teal-400">Wfuzz <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Web fuzzer.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-500">
+                                    <h4 class="text-lg font-semibold text-teal-400">Arjun <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">HTTP parameter discovery suite.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-550">
+                                    <h4 class="text-lg font-semibold text-teal-400">W3af <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Web Application Attack and Audit Framework. Requires Python.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-600">
+                                    <h4 class="text-lg font-semibold text-teal-400">BeEF (Browser Exploitation Framework) <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">The Browser Exploitation Framework Project. Requires Ruby.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-650">
+                                    <h4 class="text-lg font-semibold text-teal-400">LinPEAS <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Local Linux Privilege Escalation Awesome Script.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-700">
+                                    <h4 class="text-lg font-semibold text-teal-400">WinPEAS <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Local Windows Privilege Escalation Awesome Script.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-windows"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Privilege Escalation & Reconnaissance Resources -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-700">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Privilege Escalation & Reconnaissance Resources (5 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Privilege Escalation Awesome Scripts (PEASS-ng) <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">All-in-one suite for local privilege escalation. Contains LinPEAS, WinPEAS etc.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i> <i class="fas fa-mobile-alt"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">GTFOBins <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Curated list of Unix binaries that can be exploited to bypass local security restrictions. Access via web.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">HackTricks (PrivEsc Section) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Comprehensive collection of penetration testing and ethical hacking tricks, including privilege escalation. Access via web.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Msfvenom <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A payload generator, part of Metasploit Framework. Requires Metasploit Framework to be installed.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">PoshC2 <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A powershell C2 framework for Red Teams.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Wordlists & Social Engineering -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-800">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Wordlists & Social Engineering (6 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">SecLists <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A collection of multiple types of lists used during security assessments.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Rockyou <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A famous wordlist for password cracking. Often included in Kali Linux or can be found online. Decompressed size is large.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">SocialFish <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Phishing Tool and Social Engineering Tool.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Setoolkit (Social-Engineer Toolkit) <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open-source penetration testing framework designed for social engineering.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">GoPhish <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open-source phishing framework. Download from GitHub releases or official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">John the Ripper <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Fast password cracker. Requires compilation from source.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Password Cracking & Wireless Security -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-900">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Password Cracking & Wireless Security (3 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Hashcat <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">World's fastest and most advanced password recovery utility. GPU-accelerated. Download from official site.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Hydra <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A very fast network logon cracker which supports numerous protocols to attack.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Aircrack-ng <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">A complete suite of tools to assess WiFi network security.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fas fa-mobile-alt"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: SIEM & SOAR -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-1000">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            SIEM & SOAR (8 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">Splunk Enterprise Security <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Industry-leading commercial SIEM platform. Requires Splunk Enterprise.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">IBM QRadar <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial SIEM platform by IBM.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Microsoft Sentinel <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Cloud-native SIEM and SOAR solution by Microsoft Azure. Managed via Azure portal.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Elastic SIEM (Elastic Stack) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open-source SIEM capabilities built on the Elastic Stack (Elasticsearch, Kibana, Beats). Requires Java.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i> <i class="fab fa-apple"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">ArcSight (Micro Focus) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial SIEM platform.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">LogRhythm <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial SIEM and security analytics platform.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Palo Alto Networks Cortex XSOAR <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Security Orchestration, Automation, and Response (SOAR) platform.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-350">
+                                    <h4 class="text-lg font-semibold text-teal-400">Splunk SOAR (formerly Phantom) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Security Orchestration, Automation, and Response (SOAR) platform by Splunk.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Identity & Access Management (IAM) & PAM -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-1100">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Identity & Access Management (IAM) & PAM (9 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">IBM Resilient <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Security Orchestration, Automation, and Response (SOAR) platform by IBM.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">Swimlane <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Security Orchestration, Automation, and Response (SOAR) platform.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-100">
+                                    <h4 class="text-lg font-semibold text-teal-400">Okta <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Identity Provider (IdP) and Single Sign-On (SSO) solution. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-150">
+                                    <h4 class="text-lg font-semibold text-teal-400">Microsoft Azure Active Directory / Entra ID <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Microsoft's cloud-based identity and access management service. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-200">
+                                    <h4 class="text-lg font-semibold text-teal-400">Ping Identity <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Identity Provider (IdP) and access management solution. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-250">
+                                    <h4 class="text-lg font-semibold text-teal-400">Auth0 (Okta) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Identity Provider (IdP) and authentication/authorization platform. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-300">
+                                    <h4 class="text-lg font-semibold text-teal-400">Duo Security (MFA) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial multi-factor authentication (MFA) solution. Cloud service.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-350">
+                                    <h4 class="text-lg font-semibold text-teal-400">CyberArk <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Privileged Access Management (PAM) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-400">
+                                    <h4 class="text-lg font-semibold text-teal-400">Delinea (formerly Thycotic and Centrify) <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Privileged Access Management (PAM) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Other Essential Security Tools -->
+                    <div class="accordion-item bg-gray-800 rounded-xl shadow-lg mb-4 animate-card-entry delay-1200">
+                        <button class="accordion-header w-full p-6 text-xl font-semibold text-white flex justify-between items-center hover:bg-gray-700 transition duration-300 ease-in-out rounded-xl">
+                            Other Essential Security Tools (2 Tools) <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content p-6 pt-0 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up">
+                                    <h4 class="text-lg font-semibold text-teal-400">BeyondTrust <span class="text-sm text-gray-400 ml-2">(Manual/Web)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Commercial Privileged Access Management (PAM) solution.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fas fa-globe"></i></p>
+                                </div>
+                                <div class="tool-detail-card bg-gray-900 p-5 rounded-lg shadow-md border border-gray-700 hover:border-teal-500 transition duration-300 animate-fade-in-up delay-50">
+                                    <h4 class="text-lg font-semibold text-teal-400">HashiCorp Vault <span class="text-sm text-gray-400 ml-2">(Installable)</span></h4>
+                                    <p class="text-gray-400 text-sm mt-1">Open-source tool for managing secrets and protecting sensitive data. Complex setup required.</p>
+                                    <p class="text-gray-500 text-xs mt-2">OS Compatibility: <i class="fab fa-linux"></i> <i class="fab fa-windows"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-8 bg-gradient-to-br from-gray-900 to-gray-800 animate-gradient-shift delay-200">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-teal-400 animate-fade-in-up">About UHT-Framework</h2>
+                <div class="text-lg text-gray-300 leading-relaxed space-y-6">
+                    <p class="animate-fade-in-up delay-100">
+                        The UHT-Framework (Ufaq Hacking Toolkit) was created with a singular mission: to provide cybersecurity professionals, ethical hackers, and security enthusiasts with a powerful, flexible, and easy-to-use platform for their security assessments. In an ever-evolving threat landscape, having a reliable and comprehensive toolkit is paramount.
+                    </p>
+                    <p class="animate-fade-in-up delay-200">
+                        Developed by <span class="font-semibold text-teal-400">UfaqTech</span>, this framework emphasizes modularity, cross-platform compatibility, and an intuitive command-line interface. We believe in empowering the security community with open-source solutions that are constantly updated and maintained. Our goal is to streamline the process of penetration testing, allowing users to focus on the analysis and problem-solving rather than tool management.
+                    </p>
+                    <p class="animate-fade-in-up delay-300">
+                        We are committed to promoting responsible and ethical use of these tools. The UHT-Framework is designed purely for legitimate security testing, educational purposes, and research. Misuse of this toolkit for illegal or unauthorized activities is strictly prohibited and against our core principles.
+                    </p>
+                    <p class="font-semibold text-teal-400 animate-fade-in-up delay-400">Join us in building a more secure digital world.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-8 bg-gray-900">
+            <div class="container mx-auto text-center max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-teal-400 animate-fade-in-up">Get in Touch</h2>
+                <p class="text-lg text-gray-300 mb-8 animate-fade-in-up delay-100">
+                    Have questions, suggestions, or want to collaborate? Feel free to reach out!
+                </p>
+                <div class="flex flex-col items-center space-y-6">
+                    <a href="mailto:mawais03415942806@gmail.com" class="text-xl text-teal-300 hover:text-teal-400 transition duration-300 ease-in-out flex items-center animate-fade-in-up delay-200">
+                        <i class="fas fa-envelope mr-3 text-2xl"></i> mawais03415942806@gmail.com
+                    </a>
+                    <div class="flex flex-wrap justify-center gap-6 mt-8 animate-fade-in-up delay-300">
+                        <a href="https://www.facebook.com/xtylish.awais.9862" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-blue-600 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Ufaq_Tech?t=coGIyCC-qK84X1S7cN8Q2A&s=09" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-blue-400 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/awais-nawaz-52b643315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-blue-700 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/UfaqTech" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-white transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/xtylish.awais.9862?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-pink-500 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@talash_e__khudi?_t=ZS-8xywi3g4V1u&_r=1" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-gray-300 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://t.me/UfaqTech" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-blue-500 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-telegram"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-green-500 transition duration-300 ease-in-out social-icon-hover"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-70 backdrop-blur-sm py-8 px-4 text-center text-gray-400 rounded-t-xl mx-auto max-w-7xl mb-4">
+        <p>&copy; 2025 UHT-Framework by UfaqTech. All rights reserved.</p>
+        <p class="mt-2 text-sm">Designed for ethical hacking and security research.</p>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script src="three.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

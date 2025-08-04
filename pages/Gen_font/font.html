@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FontGenius - Modern Font Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/vendors/themify-icons/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-pen-nib"></i> FontGenius</h1>
+        <p>Your Modern and Professional Font Generator</p>
+    </header>
+
+    <main>
+        <div class="controls-container">
+            <div class="input-area">
+                <textarea id="text-input" placeholder="Type your text here..."></textarea>
+            </div>
+            <div class="toolbar">
+                <div class="font-size-control">
+                    <label for="font-size-slider">Font Size:</label>
+                    <input type="range" id="font-size-slider" min="16" max="72" value="28">
+                    <span id="font-size-value">28px</span>
+                </div>
+            </div>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="serif">Serif</button>
+                <button class="category-btn" data-category="sans-serif">Sans-serif</button>
+                <button class="category-btn" data-category="display">Display</button>
+                <button class="category-btn" data-category="handwriting">Handwriting</button>
+                <button class="category-btn" data-category="monospace">Monospace</button>
+            </div>
+        </div>
+
+        <div id="font-previews" class="font-previews-grid">
+            <!-- Font previews will be generated here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FontGenius. Created with <i class="fa-solid fa-heart"></i>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

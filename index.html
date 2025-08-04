@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
   <!-- Title & Primary Meta -->
   <title>Awais Nawaz (UfaqTech) | Developer, Programmer & UI/UX Designer Portfolio</title>
   <meta name="description" content="Official portfolio of Awais Nawaz (UfaqTech) — a skilled developer, programmer, and UI/UX designer. View JavaScript, React, Python projects. Explore UfaqTech, a creative tech company.">
-  <meta name="keywords" content="Awais Nawaz, AwaisNawaz, Awais_Nawaz, mawaisnawaz, mowaisnawaz, owaisnawaz, awaisn, awaisdev, awaisnawaz1, awaisnawaz01, awaisnawaz_, awais_n, awais.code, nawazawais, nawaz.awais, OwaisNawaz, Owais_Nawaz, UwaisNawaz, AwaysNawaz, AwaesNawaz, AwesNawaz, MowaisNawaz, AwazNawaz, AwaizNawaz, Awaiz_Nawaz, AwasNawaz, AvaisNawaz, AwaiisNawaz, AwisNawaz, UfaqTech, Ufaq_Tech, ufaq.tech, ufaq-tech, UfaqTechDev, TeamUfaqTech, ufaqtechnologies, ufaqteck, ufaqteq, theufaqtech, ufaq.tech.dev, ufaq.techie, ufaqdev, ufaqcode, ufaqdigital, ufaq_web, ufaqhub, UfuqTech, OfaqTech, UfaqTek, UfakTech, UfaaqTech, Ofaq_Tech, UfaqueTech, UfukTech, UfagTech, UfakTek, UfaqT, UfqTech, Ufaktch, UfaqTec, Ufaktic, Ufaqtic, awaisnawaz_ufaqtech, awais_ufaq, ufaqtechawais, awaisufaq, mawais_ufaq, nawazufaq, ufaqawais, awaisfromufaq, ufaq_by_awais, devawaisufaq, ufaq_cyber, ufaqhacker, ufaq_fullstack, ufaqitpro, ufaqawais.tech, github.com/awaisnawaz, github.com/ufaqtech, Awais Nawaz IT Professional, Awais Nawaz Full Stack Developer, Awais Nawaz Ethical Hacker, Awais Nawaz Web Developer, Awais Nawaz Security Expert, Awais Nawaz Frontend Developer, Awais Nawaz Backend Developer, Awais Nawaz UI/UX Designer, Awais Nawaz Programmer, Awais Nawaz Developer Portfolio, Awais Nawaz Web Portfolio, Awais Nawaz UfaqTech, Awais Nawaz at UfaqTech, Awais Nawaz UfaqTech Developer, Awais Nawaz UfaqTech Founder, Awais Nawaz UfaqTech Portfolio, Awais Nawaz GitHub UfaqTech, UfaqTech IT Services, UfaqTech Full Stack Development, UfaqTech Ethical Hacking, UfaqTech Security Consulting, UfaqTech Web Development, UfaqTech UI/UX Design, UfaqTech JavaScript React Developer, UfaqTech Programming Solutions, UfaqTech Professional Portfolio, UfaqTech Software Company, Awais Nawaz JavaScript Developer, Awais Nawaz React Developer, Awais Nawaz Python Expert, Awais Nawaz Cybersecurity, Awais Nawaz Web Security, Awais Nawaz Modern Web Developer, Awais Nawaz SaaS Developer, Awais Nawaz GitHub Portfolio, Awais Nawaz Coding Projects, Best Portfolio of Awais Nawaz, Portfolio Website of UfaqTech, Full Stack Developer from UfaqTech, IT Developer Portfolio 2025, Ethical Hacker from Pakistan, Modern IT Portfolio Developer, Web Security Developer Portfolio, Awais Nawaz LinkedIn, UfaqTech GitHub, Contact Awais Nawaz, Reach UfaqTech Developer, Follow Awais Nawaz UfaqTech">
+  <meta name="keywords" content="Awais Nawaz, Awais Nawaz Portfolio, Awais Nawaz GitHub, UfaqTech, UfaqTech Company, Awais Nawaz UfaqTech, Professional Developer, Programmer, Web Developer, UI/UX Designer, JavaScript Developer, React Developer, Python Developer, Information Technologist">
   <meta name="author" content="Awais Nawaz">
   <link rel="canonical" href="https://ufaqtech.github.io/" />
 
@@ -66,81 +67,109 @@
   <link rel="icon" href="assets/imgs/header1.png" type="image/x-icon">
 
   <!-- Font Icons -->
-  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/themify-icons/css/all.min.css">
+  
+  <!--earth three cnd js-->
+
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/Awais.css">
   <link rel="stylesheet" href="assets/css/img.css">
+
+  <!-- Bootstrap CSS -->
+
+<!-- Three.js ESM import (latest) -->
+
+
+<script type="module" src="assets/js/earth.three.min.js"></script>
+<script type="module" src="assets/js/Globe-animation.js"></script>
+<script type="module" src="assets/js/three.module.js"></script>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <a href="demo/demo.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="800"><i class="ti-shift-left-alt"></i>Work demo</a>
-    <header class="header">
-        <div class="img-f"> <img src="assets/imgs/front.png" alt="img"> </div>
-        
+    <a href="#projects" class="btn bg-danger btn-component" data-spy="affix" data-offset-top="800"><i class="ti-shift-left-alt"></i> Work Intro</a>
+     <div id="notification-container"></div>
+     <header class="header">
+         <!-- Flex container for image + text -->
+         <div class="container header-flex">
+    
+             <!-- 3D Animation Canvas Background -->
+              <div id="glob"></div>
+                 <canvas id="earthCanvas"></canvas>
+                <!-- Profile Image -->
+                <div class="img-f ">
+                  <img src="assets/images/front.png" alt="Awais Nawaz Profile Picture">
+                  </div>
 
+             <!-- Text and Social Section -->
+            <div class="header-text ">
+               <!-- Social Icons -->
+              <ul class="social-icons">
+                   <li><a class="social-link facebook" href="https://facebook.com/xtylish.awais.9862" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a class="social-link x-twitter" href="https://x.com/Ufaq_Tech" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                   <li><a class="social-link linkedin" href="https://linkedin.com/in/awais-nawaz-52b643315" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                   <li><a class="social-link github" href="https://github.com/UfaqTech" target="_blank"><i class="fab fa-github"></i></a></li>
+                   <li><a class="social-link instagram" href="https://instagram.com/xtylish.awais.9862" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                   <li><a class="social-link tiktok" href="https://www.tiktok.com/@talash_e__khudi" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                   <li><a class="social-link email" href="mailto:mawais03415942806@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+                   <li><a class="social-link telegram" href="https://t.me/UfaqTech" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+                   <li><a class="social-link whatsapp" href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+              </ul>
 
-        <div class="container">
-            <!-- # Social Icons Updated -->
-            <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" href="https://www.facebook.com/xtylish.awais.9862" target="_blank"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://x.com/Ufaq_Tech?t=coGIyCC-qK84X1S7cN8Q2A&s=09" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/xtylish.awais.9862?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://github.com/UfaqTech" target="_blank"><i class="ti-github" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/in/awais-nawaz-52b643315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://t.me/UfaqTech" target="_blank"><i class="ti-telegram" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank"><i class="ti-whatsapp" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="mailto:mawais03415942806@gmail.com" target="_blank"><i class="ti-email" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.tiktok.com/@talash_e__khudi?_t=ZS-8xywi3g4V1u&_r=1" target="_blank"><i class="ti-music" aria-hidden="true"></i></a></li>
-            </ul>  
-            <div class="header-content">
-                
-                <h4 class="header-subtitle" >Hello, I am</h4>
-                <h1 class="header-title">Awais Nawaz</h1>
-                <h6 class="header-mono" >Pro Developer | UI & UX Designer</h6>
-                <button class="btn btn-primary btn-rounded" onclick="window.print()"><i class="ti-printer pr-2"></i>Print Resume</button>
-
-            </div>
-        </div> 
-             
+              <!-- Intro Content -->
+                <div class="header-content">
+                    <h4 class="header-subtitle">Hello, I am</h4>
+                    <h1 class="header-title ">Awais Nawaz</h1>
+                    <h6 class="header-mono">Pro Developer | UI & UX Designer</h6>
+                    <button class="btn btn-primary btn-rounded" onclick="window.print()">
+                    <i class="ti-printer pr-2"></i>Print Resume
+                    </button>
+                </div>
+          </div>    
+         </div>
      </header>
+
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-          <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav brand">
-                    <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
-                    <li class="brand-txt">
-                        <h5 class="brand-title">Awais Nawaz</h5>
-                        <div class="brand-subtitle">Pro Developer | UI & UX Designer</div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <div class="container">
+                   <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+                     <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                             <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item">
+                                     <a href="#home" class="nav-link">Home</a>
+                                 </li>
+                                  <li class="nav-item">
+                                     <a href="#about" class="nav-link">About</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a href="#resume" class="nav-link">Resume</a>
+                                   </li>
+                              </ul>
+                        <ul class="navbar-nav brand">
+                            <img src="assets/images/avatar.jpg" alt="" class="brand-img">
+                              <li class="brand-txt">
+                                <h5 class="brand-title">Awais Nawaz</h5>
+                               <div class="brand-subtitle">Pro Developer | UI & UX Designer</div>
+                             </li>
+                        </ul>
+                       <ul class="navbar-nav ml-auto">
+                           <li class="nav-item">
+                             <a href="#projects" class="nav-link">Projects</a>
+                           </li>
+                            <li class="nav-item">
+                              <a href="#blog" class="nav-link">Blog</a>
+                            </li>
+                            <li class="nav-item last-item">
+                              <a href="#contact" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+     </nav>
+
+
     <div class="container-fluid">
         <div id="about" class="row about-section">
             <div class="col-lg-4 about-card">
@@ -149,7 +178,7 @@
                 <h5 class="mb-3">A Web Designer / Developer Located In Pakistan</h5>
                 <p class="mt-20"> I delivered seamless digital solutions,resolved technical challenges,and 
                     maintained clean code practices to drive project success and stakeholder satisfaction.</p>
-                <button  class="btn btn-outline-danger"><i class="icon-down-circled2 "></i><a href="assets/imgs/Awais’s resume.pdf">Download My CV</a></button>
+                  <button class="btn btn-outline-dark "  ><i class="ti-download pr-2" ></i><a  href="assets/images/Awais’s resume.pdf">Download My CV</a></button>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
@@ -161,14 +190,20 @@
                     <li><span>Skype</span> : Awais Nawaz </li>
                     <li><span>Address</span> : muzaffarghar , punjab , pakistan</li>
                 </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-                </ul>  
+               
+               <ul class="social-icons">
+                    <li><a class="social-link facebook" href="https://facebook.com/xtylish.awais.9862" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="social-link x-twitter" href="https://x.com/Ufaq_Tech" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                    <li><a class="social-link linkedin" href="https://linkedin.com/in/awais-nawaz-52b643315" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a class="social-link github" href="https://github.com/UfaqTech" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a class="social-link instagram" href="https://instagram.com/xtylish.awais.9862" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="social-link tiktok" href="https://www.tiktok.com/@talash_e__khudi" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a class="social-link email" href="mailto:mawais03415942806@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+                    <li><a class="social-link telegram" href="https://t.me/UfaqTech" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+                    <li><a class="social-link whatsapp" href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
             </div>
+
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">My Expertise</h3>
                 <span class="line mb-5"></span>
@@ -347,7 +382,7 @@
                             <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">500</h1>
+                            <h1 class="text-danger font-weight-bold font40">24</h1>
                             <p class="text-light mb-1">Hours Worked</p>
                         </div>
                     </div>
@@ -358,7 +393,7 @@
                             <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">50K</h1>
+                            <h1 class="text-danger font-weight-bold font40">50+</h1>
                             <p class="text-light mb-1">Project Finished</p>
                         </div>
                     </div>
@@ -369,7 +404,7 @@
                             <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">200K</h1>
+                            <h1 class="text-danger font-weight-bold font40">1K+</h1>
                             <p class="text-light mb-1">Happy Clients</p>
                         </div>
                     </div>
@@ -380,8 +415,8 @@
                             <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
                         </div>
                         <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">2k</h1>
-                            <p class="text-light mb-1">Coffee Drinked</p>
+                            <h1 class="text-danger font-weight-bold font40">99.9%</h1>
+                            <p class="text-light mb-1">Broken Heart</p>
                         </div>
                     </div>
                 </div>
@@ -601,274 +636,514 @@
         </div>
     </section>
 
-    <section class="section bg-custom-gray" id="price">
+  <section class="section bg-custom-gray" id="price">
+    <div class="container">
+        <h1 class="mb-5"><span class="text-danger">Packs</span> Pricing</h1>
+        <div class="row carousel align-items-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="price-card text-center mb-4 pointer-hover animate__animated animate__fadeInUp">
+                    <h3 class="price-card-title">Free</h3>
+                    <div class="price-card-cost">
+                        <sup class="fas fa-dollar-sign"></sup>
+                        <span class="num">0</span>
+                        <span class="date">/mo</span>
+                    </div>
+                    <ul class="list">
+                        <li class="list-item">3 <span class="text-muted">Projects</span></li>
+                        <li class="list-item">500MB <span class="text-muted">Storage</span></li>
+                        <li class="list-item"><span class="text-muted">No Domain</span></li>
+                        <li class="list-item">1 <span class="text-muted">User</span></li>
+                    </ul>
+                    <button class="btn btn-primary btn-rounded w-lg subscribe-btn" data-plan="Free">Subscribe</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="price-card text-center mb-4 pointer-hover animate__animated animate__fadeInUp">
+                    <h3 class="price-card-title">Basic</h3>
+                    <div class="price-card-cost">
+                        <sup class="fas fa-dollar-sign"></sup>
+                        <span class="num">15</span>
+                        <span class="date">/mo</span>
+                    </div>
+                    <ul class="list">
+                        <li class="list-item">20 <span class="text-muted">Projects</span></li>
+                        <li class="list-item">5GB <span class="text-muted">Storage</span></li>
+                        <li class="list-item">1 <span class="text-muted">Domain</span></li>
+                        <li class="list-item">3 <span class="text-muted">Users</span></li>
+                    </ul>
+                    <button class="btn btn-primary btn-rounded w-lg subscribe-btn" data-plan="Basic">Subscribe</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="price-card text-center price-card-requried mb-4 pointer-hover animate__animated animate__fadeInUp">
+                    <h3 class="price-card-title">Exclusive</h3>
+                    <div class="price-card-cost">
+                        <sup class="fas fa-dollar-sign"></sup>
+                        <span class="num">39</span>
+                        <span class="date">/mo</span>
+                    </div>
+                    <ul class="list">
+                        <li class="list-item">100 <span class="text-muted">Projects</span></li>
+                        <li class="list-item">25GB <span class="text-muted">Storage</span></li>
+                        <li class="list-item">3 <span class="text-muted">Domains</span></li>
+                        <li class="list-item">10 <span class="text-muted">Users</span></li>
+                    </ul>
+                    <button class="btn btn-primary btn-rounded w-lg subscribe-btn" data-plan="Exclusive">Subscribe</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="price-card text-center mb-4 pointer-hover animate__animated animate__fadeInUp">
+                    <h3 class="price-card-title">Pro</h3>
+                    <div class="price-card-cost">
+                        <sup class="fas fa-dollar-sign"></sup>
+                        <span class="num">99</span>
+                        <span class="date">/mo</span>
+                    </div>
+                    <ul class="list">
+                        <li class="list-item">Unlimited <span class="text-muted">Projects</span></li>
+                        <li class="list-item">500GB <span class="text-muted">Storage</span></li>
+                        <li class="list-item">10 <span class="text-muted">Domains</span></li>
+                        <li class="list-item">Unlimited <span class="text-muted">Users</span></li>
+                    </ul>
+                    <button class="btn btn-primary btn-rounded w-lg subscribe-btn" data-plan="Pro">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="modal fade" id="subscriptionModal" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content min-vw-50">
+            <div class="modal-header">
+                <h5 class="modal-title" id="subscriptionModalLabel">Subscribe to <span id="planName" class="text-primary"></span> Plan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="subscriptionForm" class="min-vw-50">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="subscriberName">Name</label>
+                        <input type="text" class="form-control" id="subscriberName" name="name" required placeholder="Your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="subscriberEmail">Email</label>
+                        <input type="email" class="form-control" id="subscriberEmail" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Choose Payment Method</label>
+                        <select class="form-control" id="paymentMethod" name="payment" required>
+                            <option value="">Select or search for a payment method</option>
+                            <option value="credit">Credit/Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="stripe">Stripe</option>
+                            <option value="googlepay">Google Pay</option>
+                            <option value="applepay">Apple Pay</option>
+                            <option value="klarna">Klarna (Pay in installments)</option>
+                            <option value="afterpay">Afterpay (4 interest-free payments)</option>
+                            <option value="affirm">Affirm (Flexible payment plans)</option>
+                            <option value="venmo">Venmo</option>
+                            <option value="zelle">Zelle (Instant bank transfer)</option>
+                            <option value="ideal">iDEAL (Dutch bank transfer)</option>
+                            <option value="sepa">SEPA Direct Debit (Eurozone bank transfer)</option>
+                            <option value="giropay">Giropay (German bank transfer)</option>
+                            <option value="eps">EPS (Austrian online bank transfer)</option>
+                            <option value="mybank">MyBank (Italian online bank transfer)</option>
+                            <option value="p24">Przelewy24 (Polish online bank transfer)</option>
+                            <option value="sofort">Sofort (European direct payment)</option>
+                            <option value="alipay">Alipay (Chinese mobile payment)</option>
+                            <option value="wechatpay">WeChat Pay (Chinese mobile payment)</option>
+                            <option value="unionpay">UnionPay (Chinese card network)</option>
+                            <option value="bitcoin">Bitcoin (BTC)</option>
+                            <option value="ethereum">Ethereum (ETH)</option>
+                            <option value="usdt">USDT (Tether ERC20)</option>
+                            <option value="litecoin">Litecoin (LTC)</option>
+                            <option value="bank">Bank Transfer (General)</option>
+                        </select>
+                    </div>
+
+                    <div id="paymentDetails" class="payment-card-view mt-3 mb-2 animate__animated animate__fadeIn" style="display:none;">
+                        <div class="payment-card-header d-flex align-items-center">
+                            <i id="paymentCardIcon" class="payment-icon mr-2"></i>
+                            <h6 id="paymentCardTitle" class="mb-0"></h6>
+                        </div>
+                        <div id="paymentCardBody" class="payment-card-body">
+                            </div>
+                    </div>
+
+                    <input type="hidden" name="plan" id="selectedPlan">
+                    <div id="subscriptionSuccess" class="alert alert-success mt-2 animate__animated" style="display:none;">
+                        <i class="fas fa-check-circle"></i> Subscription successful!
+                    </div>
+                    <div id="subscriptionError" class="alert alert-danger mt-2 animate__animated" style="display:none;">
+                        <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-rounded w-lg animate__animated animate__pulse">Subscribe Now <i class="fas fa-arrow-right ml-1"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+    
+   
+    <section class="section bg-secondary py-5">
+        <div class="container text-center">
+            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
+            <button class="btn bg-primary w-lg" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Hire me</button>
+        </div>
+    </section>
+
+    <!-- projects Section -->
+   <section class="section bg-custom-gray" id="projects">
         <div class="container">
-            <h1 class="mb-5"><span class="text-danger">Packs</span> Pricing</h1>
-            <div class="row align-items-center">
-                <div class="col-md-6 col-lg-3">
-                    <div class="price-card text-center mb-4">
-                        <h3 class="price-card-title">Free</h3>
-                        <div class="price-card-cost">
-                            <sup class="ti-money"></sup>
-                            <span class="num">0</span>
-                            <span class="date">MO</span>
-                        </div>
-                        <ul class="list">
-                            <li class="list-item">5 <span class="text-muted">Project</span></li>
-                            <li class="list-item">1GB <span class="text-muted">Storage</span></li>
-                            <li class="list-item"><span class="text-muted">No Domain</span></li>
-                            <li class="list-item">1 <span class="text-muted">User</span></li>
-                        </ul>
-                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
-                    </div>
+            <h1 class="mb-5">
+                <span class="text-danger">Latest </span> projects
+            </h1>
+            <div class="projects">
+                <!-- Filters -->
+                <div class="filters text-center mb-4">
+                    <a href="#" data-filter=".new" class="btn active">
+                        New
+                    </a>
+                     <a href="#" data-filter=".web" class="btn">
+                        Web
+                    </a>
+                    <a href="#" data-filter=".advertising" class="btn">
+                        Advertising
+                    </a>
+                    <a href="#" data-filter=".branding" class="btn">
+                        Branding
+                    </a>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="price-card text-center mb-4">
-                        <h3 class="price-card-title">Basic</h3>
-                        <div class="price-card-cost">
-                            <sup class="ti-money"></sup>
-                            <span class="num">10</span>
-                            <span class="date">MO</span>
+
+                <!-- projects Grid -->
+                <div class="row projects-container">
+                    <!-- projects Item 1: Web New -->
+                   <div class="project-items col-md-6 col-lg-4 web new">
+             <div class="projects-item shadow rounded overflow-hidden mb-4">
+                    <img src="assets/images/portfolio.jpg" class="img-fluid" alt="Web Project">
+                                </div>
+                       <div class="content-holder p-3">
+                   <h6 class="title mb-1">
+                    <i class="ti-world text-primary"></i> WEB
+                       </h6>
+                          <p class="subtitle small" style="font-size: 0.9rem; line-height: 1.6;">
+                         💼 <strong>Professional IT Portfolio:</strong> A modern, responsive website that highlights your expertise with a downloadable CV, detailed tech projects, and client testimonials.<br>
+                       🧠 <strong>Showcase:</strong> Dynamic applications, code samples, and case studies that demonstrate your problem-solving and programming skills.<br>
+                      📬 <strong>Contact:</strong> Includes a sleek contact form for seamless communication—plus a transparent pricing section to help clients choose the right service package.
+                       </p>
+                        <div class="d-flex gap-2 mt-3">
+                       <a href="#" class="btn btn-sm btn-outline-primary">
+                      <i class="ti-eye"></i> Preview
+                    </a>
+                <a href="https://github.com/UfaqTech" class="btn btn-sm btn-primary">
+                 <i class="ti-download"></i> Source Code
+                </a>
+             </div>
+            </div>
+            </div>
+
+
+
+                   
+
+                    <!-- projects Item 2: Web New -->
+                    <div class="project-items col-md-6 col-lg-4  web new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/uth_frame-work.jpg" class="img-fluid" alt="Web Project">
                         </div>
-                        <ul class="list">
-                            <li class="list-item">50 <span class="text-muted">Project</span></li>
-                            <li class="list-item">10GB <span class="text-muted">Storage</span></li>
-                            <li class="list-item">1<span class="text-muted">Domain</span></li>
-                            <li class="list-item">5 <span class="text-muted">User</span></li>
-                        </ul>
-                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-world text-primary"></i> WEB</h6>
+                           <p class="subtitle" style="font-size: 0.9rem; line-height: 1.6;">
+                          ⚡ <strong>UTH — UfaqTech Hacking Toolkit:</strong> A cutting-edge cybersecurity suite featuring smart automation, penetration testing modules, and real-time threat analysis.<br>
+                           🔍 <strong>Built for ethical hackers and security enthusiasts:</strong> UTH empowers secure digital exploration with intuitive tools and optimized performance.
+                          </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/uth_faramework/index.html" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary"  onclick="return showBeautifulAlert();" >
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="price-card text-center price-card-requried mb-4">
-                        <h3 class="price-card-title">Exclusive</h3>
-                        <div class="price-card-cost">
-                            <sup class="ti-money"></sup>
-                            <span class="num">25</span>
-                            <span class="date">MO</span>
+
+                    <!-- projects Item 3: Advertising New -->
+                    <div class="project-items col-md-6 col-lg-4  advertising new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/version1.jpg" class="img-fluid" alt="Advertising Project">
                         </div>
-                        <ul class="list">
-                            <li class="list-item">150 <span class="text-muted">Project</span></li>
-                            <li class="list-item">15GB <span class="text-muted">Storage</span></li>
-                            <li class="list-item">5<span class="text-muted"> Domain</span></li>
-                            <li class="list-item">15<span class="text-muted">User</span></li>
-                        </ul>
-                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-announcement text-danger"></i> Advertising</h6>
+                            <p class="subtitle  small">
+                                Social media ad campaign dashboard with analytics integration.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/homepage_1.html" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="price-card text-center mb-4">
-                        <h3 class="price-card-title">Pro</h3>
-                        <div class="price-card-cost">
-                            <sup class="ti-money"></sup>
-                            <span class="num">99</span>
-                            <span class="date">MO</span>
+
+                    <!-- projects Item 4: Web -->
+                    <div class="project-items col-md-6 col-lg-4  web new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/font-web.jpg" class="img-fluid" alt="Web Project">
                         </div>
-                        <ul class="list">
-                            <li class="list-item">500 <span class="text-muted">Project</span></li>
-                            <li class="list-item">1000GB <span class="text-muted">Storage</span></li>
-                            <li class="list-item">10<span class="text-muted"> Domain</span></li>
-                            <li class="list-item">Unlimite<span class="text-muted">User</span></li>
-                        </ul>
-                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-world text-primary"></i> WEB</h6>
+                            <p class="subtitle small">
+                               ✨ Discover your perfect typeface with just a click—simple, sleek font generation made effortless.
+                              🎨 Design meets function: customize and preview beautiful fonts instantly for any project.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/Gen_font/font.html" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 5: Advertising -->
+                    <div class="project-items col-md-6 col-lg-4  advertising new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/Version-2.jpg" class="img-fluid" alt="Advertising Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-announcement text-danger"></i> Advertising</h6>
+                            <p class="subtitle small">
+                                Campaign-based digital strategy platform built for conversions.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/homepage_2.html" class="btn btn-sm btn-outline-primary" >
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 6: Web New -->
+                     <div class="project-items col-md-6 col-lg-4 web new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/uth-dashboard.jpg" class="img-fluid" alt="Web Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-world text-primary"></i> WEB</h6>
+                            <p class="subtitle">
+                                A fully responsive web app with interactive UI and scalable backend.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/UTH/UHT.Html" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 7: Advertising New -->
+                    <div class="project-items col-md-6 col-lg-4  advertising new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/version-3.jpg" class="img-fluid" alt="Advertising Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-announcement text-danger"></i> Advertising</h6>
+                            <p class="subtitle small">
+                                Interactive ad builder for real-time campaign previews.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/homepage_3.html" class="btn btn-sm btn-outline-primary">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 8: Advertising New -->
+                    <div class="project-items col-md-6 col-lg-4  advertising ">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/dashboard.jpg" class="img-fluid" alt="Advertising Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-announcement text-danger"></i> Advertising</h6>
+                            <p class="subtitle small">
+                                Analytics dashboard for tracking ad performance metrics.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="pages/dashboard.html" class="btn btn-sm btn-outline-primary" >
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 9: Branding New -->
+                    <div class="project-items col-md-6 col-lg-4  branding new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/b1.jpg" class="img-fluid" alt="Branding Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-brush text-success"></i> Branding</h6>
+                            <p class="subtitle small">
+                                Visual identity and logo design for next-gen startups.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 10: Branding -->
+                    <div class="project-items col-md-6 col-lg-4  branding">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/b2.png" class="img-fluid" alt="Branding Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-brush text-success"></i> Branding</h6>
+                            <p class="subtitle small">
+                                Brand guidelines and marketing collateral for SaaS products.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 11: Branding New -->
+                    <div class="project-items col-md-6 col-lg-4  branding new">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/b3.jpg" class="img-fluid" alt="Branding Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-brush text-success"></i> Branding</h6>
+                            <p class="subtitle small">
+                                Creative logo and business card design for agencies.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-eye "></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary"  onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 12: Branding -->
+                    <div class="project-items col-md-6 col-lg-4  branding">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/b4.jpg" class="img-fluid" alt="Branding Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-brush text-success"></i> Branding</h6>
+                            <p class="subtitle small">
+                                Rebranding and visual refresh for established businesses.
+                            </p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary"  onclick="return showBeautifulAlert();">
+                                    <i class="ti-eye"></i> Preview
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projects Item 13: Branding -->
+                    <div class="project-items col-md-6 col-lg-4  branding">
+                        <div class="projects-item shadow rounded overflow-hidden mb-4">
+                            <img src="assets/images/b5.png" class="img-fluid" alt="Branding Project">
+                        </div>
+                        <div class="content-holder p-3">
+                            <h6 class="title mb-1"><i class="ti-brush text-success"></i> Branding</h6>
+                            <p class="subtitle small">
+                                Brand assets and style guide for digital products.
+                          <a href="#" class="btn btn-sm btn-outline-primary" onclick="return showBeautifulAlert();">
+                                       <i class="ti-eye"></i> Preview
+                                       </a>
+
+
+
+                                <a href="#" class="btn btn-sm btn-primary" onclick="return showBeautifulAlert();">
+                                    <i class="ti-download"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section bg-dark py-5">
-        <div class="container text-center">
-            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <button class="btn bg-primary w-lg" >Hire me</button>
-             <a class="btn btn-primary"  href="demo/demo.html">Work Demo </a>
-        </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section class="section bg-custom-gray" id="portfolio">
-        <div class="container">
-            <h1 class="mb-5"><span class="text-danger">As</span> Advertiser <marquee behavior="scroll" direction="right"><span class="text-danger">(In Development phase )</span></marquee></h1>
-            <div class="portfolio">
-                <div class="filters">
-                    <a href="#" data-filter=".new" class="active">
-                        New
-                    </a>
-                    <a href="#" data-filter=".advertising">
-                        Advertising
-                    </a>
-                    <a href="#" data-filter=".branding">
-                        Branding
-                    </a>
-                    <a href="#" data-filter=".web">
-                        Web
-                    </a>
-                </div>
-                <div class="portfolio-container"> 
-                    <div class="col-md-6 col-lg-4 web new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/web-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-1.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">WEB</h6>
-                                    <p class="subtitle">The web is a vast and interconnected digital space, enabling seamless communication, information sharing, 
-                                        and innovation. Through dynamic websites, interactive experiences, and robust applications, it continues to 
-                                        evolve, shaping the way people connect and engage online.</p>
-                                </div>
-                            </div>   
-                        </div>             
-                    </div>
-                    <div class="col-md-6 col-lg-4 web new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/web-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div> 
-                        </div>                         
-                    </div>
-                    <div class="col-md-6 col-lg-4 advertising new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/advertising-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">ADVERSTISING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>    
-                        </div>              
-                    </div> 
-                    <div class="col-md-6 col-lg-4 web">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/web-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-4.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                     
-                    </div>
 
-                    <div class="col-md-6 col-lg-4 advertising"> 
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/advertising-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">ADVERSITING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                    <div class="col-md-6 col-lg-4 web new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/web-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
-                           <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/web-3.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">WEB</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                     
-                    </div>
-                    <div class="col-md-6 col-lg-4 advertising new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/advertising-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
-                           <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">ADVERSITING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                    <div class="col-md-6 col-lg-4 advertising new"> 
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">ADVERTISING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>
-                                
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/branding-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div> 
-                        </div>
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/branding-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-2.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                     
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/branding-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                    
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/branding-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-4.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                      
-                    </div> 
-                    <div class="col-md-6 col-lg-4 branding">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/branding-5.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/branding-5.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BRANDING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>                                                   
-                    </div>
-                </div> 
-            </div>  
-        </div>            
-    </section>
-    <!-- End of portfolio section -->
+   <!-- Script to show alert -->
+<script>
+  function showBeautifulAlert() {
+   
+
+    let timerInterval;
+  Swal.fire({
+    title: 'Launching Soon!',
+    html: 'This feature will unlock in <b></b> seconds.',
+    timer: 50000,
+    timerProgressBar: true,
+    didOpen: () => {
+      const b = Swal.getHtmlContainer().querySelector('b');
+      timerInterval = setInterval(() => {
+        b.textContent = Math.ceil(Swal.getTimerLeft() / 1000);
+      }, 100);
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+    }
+  });
+    return false;
+    
+  }
+</script>
+
+
+
+    <!-- End of projects section -->
 
     <section class="section" id="blog">
         <div class="container">
@@ -876,10 +1151,10 @@
             <div class="row">
                 <div class="blog-card">
                     <div class="img-holder">
-                        <img src="assets/imgs/blog1.jpg" alt="Tech Innovations - Future Trends">
+                        <img src="assets/images/blog1.jpg" alt="Tech Innovations - Future Trends">
                     </div>
-                    <div class="content-holder">
-                        <h6 class="title">Emerging Tech Innovations</h6>
+                    <div class="b-content-holder">
+                        <h6 class="title text-success ">Emerging Tech Innovations</h6>
                         <p class="post-details">
                             <a href="#">By: Admin</a>
                             <a href="#"><i class="ti-heart text-danger"></i> 234</a>
@@ -891,120 +1166,237 @@
                         <p><b>How will these innovations impact businesses and daily life?</b></p>
                         <p>Discover expert insights, industry trends, and predictions for the next big technological leap.</p>
         
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                        <a href="#blog" class="read-more" onclick=" showBeautifulMessage();">Read more <i class="ti-angle-double-right"></i></a>
                     </div>
                 </div>
         
                 <div class="blog-card">
                     <div class="img-holder">
-                        <img src="assets/imgs/blog2.jpg" alt="Web Development - Best Practices">
+                        <img src="assets/images/blog2.jpg" alt="Web Development - Best Practices">
                     </div>
-                    <div class="content-holder">
-                        <h6 class="title">Mastering Web Development</h6>
+                    <div class="b-content-holder">
+                        <h6 class="title text-success">Mastering Web Development</h6>
                         <p class="post-details">
                             <a href="#">By: Admin</a>
                             <a href="#"><i class="ti-heart text-danger"></i> 456</a>
                             <a href="#"><i class="ti-comment"></i> 264</a>
                         </p>
-                        
-                        <p>Want to stay ahead in web development? Discover the **latest trends**, **best practices**, and **frameworks** reshaping the industry.</p>
-        
-                        <p><b>From React to Next.js, what’s the future of front-end?</b></p>
-                        <p>Learn how to create faster, more efficient websites with cutting-edge tools and techniques.</p>
-        
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                        <p>
+                            Elevate your web development skills by embracing the latest industry trends and best practices. Explore how modern frameworks and technologies—like React, Next.js, and beyond—are revolutionizing the way we build fast, scalable, and user-centric websites.
+                        </p>
+                        <p>
+                            <b>What’s next for front-end development?</b>
+                        </p>
+                        <p>
+                            Learn actionable strategies to optimize performance, enhance accessibility, and deliver seamless digital experiences using today’s most powerful tools and techniques.
+                        </p>
+
+                        <a href="#blog" class="read-more" onclick=" showBeautifulMessage();">Read more <i class="ti-angle-double-right"></i></a>
                     </div>
                 </div>
         
                 <div class="blog-card">
                     <div class="img-holder">
-                        <img src="assets/imgs/blog3.jpg" alt="UX Design - Enhancing User Experience">
+                        <img src="assets/images/blog3.jpg" alt="UX Design - Enhancing User Experience">
                     </div>
-                    <div class="content-holder">
-                        <h6 class="title">The Future of UX Design</h6>
+                    <div class="b-content-holder ">
+                        <h6 class="title-b text-success">The Future of UX Design</h6>
                         <p class="post-details">
                             <a href="#">By: Admin</a>
                             <a href="#"><i class="ti-heart text-danger"></i> 431</a>
                             <a href="#"><i class="ti-comment"></i> 312</a>
                         </p>
                         
-                        <p>Great design isn’t just about aesthetics—it’s about user experience! Explore **human-centered design strategies** that make digital products more intuitive and engaging.</p>
+                       <p>Design goes far beyond visual appeal—it's the gateway to a meaningful user experience. Discover how adopting <strong>human-centered design strategies</strong> can transform digital platforms into intuitive, emotionally resonant journeys.</p>
+
+                        <p><strong>What drives stronger customer connections?</strong></p>
+                        <p>Learn how <strong>UI/UX best practices</strong>, <strong>inclusive accessibility standards</strong>, and <strong>dynamic interaction design</strong> are crafting tomorrow’s seamless and personalized digital experiences.</p>
         
-                        <p><b>How can businesses improve customer interactions?</b></p>
-                        <p>Find out how **UI/UX principles**, **accessibility**, and **interactive design** are shaping tomorrow’s digital experiences.</p>
-        
-                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                        <a href="#blog" class="read-more" onclick=" showBeautifulMessage();">Read more <i class="ti-angle-double-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         
+<script>
+
+function showBeautifulMessage() {
+    Swal.fire({
+        title: '🌸 So Pretty!',
+        text: 'You just clicked something beautiful. Let the charm begin!',
+        icon: 'success',
+        confirmButtonText: 'Aww, Thanks! 💖',
+        background: '#fff0f5',
+        color: '#c71585',
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+}
+</script>
+
+
     </section>
 
     <div class="section contact" id="contact">
-        <div id="map" class="map"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" placeholder="Message" rows="7" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="contact-info-card">
-                        <h4 class="contact-title">Get in touch</h4>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
-                            </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+(92)3415942806</span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-map-alt icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Address :<br> <span class="text-muted">muzaffarghar , punjab , pakistan.</span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">mawais03415942806@gmail.com</span></h6>
-                            </div>
-                        </div>
-                        <ul class="social-icons pt-4">
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-                        </ul> 
-                    </div>
-                </div>
+  <div id="map" class="map"></div>
+  <div class="container">
+    <div class="row">
+      
+      <!-- LEFT: Contact Form -->
+      <div class="col-lg-8">
+        <div class="contact-form-card">
+          <h4 class="contact-title">Send a message</h4>
+          <form id="contactForm" action="https://formsubmit.co/mawais03415942806@gmail.com" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://ufaqtech.github.io/#contact">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="form-group">
+              <input class="form-control" name="name" type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="email" type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" placeholder="Message" rows="7" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-primary">Send Message</button>
             </div>
 
+            <!-- Success Message -->
+            <div id="success-message" class="alert alert-success mt-3" style="display: none;">
+              ✅ Thank you! Your message has been sent.
+            </div>
+          </form>
         </div>
+      </div>
+
+      <!-- RIGHT: Contact Info -->
+      <div class="col-lg-4">
+        <div class="contact-info-card">
+          <h4 class="contact-title">Get in touch</h4>
+
+          <div class="row mb-2">
+            <div class="col-1 pt-1 mr-1"><i class="ti-mobile icon-md"></i></div>
+            <div class="col-10">
+              <h6 class="d-inline">Phone :<br><span class="text-muted">+(92)3415942806</span></h6>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-1 pt-1 mr-1"><i class="ti-map-alt icon-md"></i></div>
+            <div class="col-10">
+              <h6 class="d-inline">Address :<br><span class="text-muted">Muzaffargarh, Punjab, Pakistan.</span></h6>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-1 pt-1 mr-1"><i class="ti-envelope icon-md"></i></div>
+            <div class="col-10">
+              <h6 class="d-inline">Email :<br><span class="text-muted">mawais03415942806@gmail.com</span></h6>
+            </div>
+          </div>
+
+          <ul class="social-icons">
+            <li><a class="social-link facebook" href="https://facebook.com/xtylish.awais.9862" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="social-link x-twitter" href="https://x.com/Ufaq_Tech" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            <li><a class="social-link linkedin" href="https://linkedin.com/in/awais-nawaz-52b643315" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="social-link github" href="https://github.com/UfaqTech" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a class="social-link instagram" href="https://instagram.com/xtylish.awais.9862" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="social-link tiktok" href="https://www.tiktok.com/@talash_e__khudi" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            <li><a class="social-link email" href="mailto:mawais03415942806@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            <li><a class="social-link telegram" href="https://t.me/UfaqTech" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+            <li><a class="social-link whatsapp" href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
+<!-- Form JS -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = this;
+  const formData = new FormData(form);
+  const successMessageElement = document.getElementById("success-message"); // Reference to your old success message
+
+    /**
+     * Shows a beautiful toast notification on the screen.
+     * @param {string} message - The message to display in the toast.
+     * @param {string} [type='info'] - The type of notification: 'success', 'error', or 'info'.
+     */
+    function showToast(message, type = 'info') {
+        const container = document.getElementById("notification-container"); // Make sure this container exists in your HTML
+        const toast = document.createElement("div");
+        toast.classList.add("toast-notification", type); 
+
+        // Determine icon based on notification type (requires Font Awesome CDN in your <head>)
+        let iconClass = '';
+        if (type === 'success') {
+            iconClass = 'fas fa-check-circle';
+        } else if (type === 'error') {
+            iconClass = 'fas fa-times-circle';
+        } else if (type === 'info') {
+            iconClass = 'fas fa-info-circle';
+        }
+
+        if (iconClass) {
+            const icon = document.createElement('i');
+            icon.classList.add(...iconClass.split(' ')); 
+            toast.appendChild(icon);
+        }
+
+        const text = document.createTextNode(message);
+        toast.appendChild(text);
+
+        container.appendChild(toast); 
+
+        // Remove the toast after its animation completes (3 seconds total for slideIn + fadeOut)
+        setTimeout(() => {
+            toast.remove();
+        }, 3000); // This duration should match the total animation time in your CSS
+    }
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset(); // Clear the form fields
+      // Ensure the old success message is hidden if it was ever shown
+      if (successMessageElement) {
+        successMessageElement.style.display = "none"; 
+      }
+      // Show the beautiful toast notification instead
+      showToast("✅ Thank you! Your message has been sent. Email may still send.", 'success');
+    } else {
+      // Attempt to get a more specific error message from FormSubmit's response
+      response.json().then(data => {
+          showToast(`❌ Failed to send message: ${data.message || 'Please try again.'}`, 'error');
+      }).catch(() => {
+          // Fallback for non-JSON or unreadable error responses
+          showToast("❌ Failed to send message. Please try again.", 'error');
+      });
+    }
+  })
+  .catch(() => {
+      // Handle network errors (e.g., no internet connection)
+      showToast("⚠️ Network error. Please check your connection and try again later. Email may still send.", 'info');
+  });
+});
+</script>
+
 
     
 
@@ -1016,21 +1408,27 @@
         </div>
     </footer>
 
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<!-- Scripts for telegram bot -->
+    <script src="assets/js/telegram.js"></script>
+    <!-- core  -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.affix.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.js"></script>
+ 
 
     <!-- Isotope  -->
-    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.js"></script>
     
     <!-- Google mpas -->
     <script async defer src="#"></script>
 
     <!-- awais js -->
     <script src="assets/js/awais.js"></script>
+    <script src="vendors/bootstrap/js/sweetalert.js"></script>
 
 </body>
 </html>

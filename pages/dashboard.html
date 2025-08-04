@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UfaqTech: Crafting cutting-edge web and mobile solutions with innovation and unparalleled expertise.">
+    <meta name="author" content="Awais Nawaz">
+
+    <title>UfaqTech – Demo Projects & Digital Solutions Dashboard</title>
+
+     <!-- Bootstrap core CSS -->
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="/vendors/themify-icons/css/all.min.css">
+
+
+    <!-- Google Fonts - Inter for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Three.js CDN for 3D animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/real-social-icon.css">
+   
+</head>
+
+<body>
+
+    <!-- Hamburger Icon (to open sidebar) -->
+   <span class="hamburger" onclick="openNav()">&#9776;</span>
+
+<!-- Overlay -->
+<div class="overlay" onclick="closeNav()"></div>
+
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="sidebar-closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-header">
+            <div class="sidebar-logo-container">
+                <img src="/assets/images/my-logo.PNG" onerror="this.onerror=null;this.src='#';" alt="UfaqTech company logo featuring modern stylized text UfaqTech in bold font with a blue and white color scheme conveying innovation and professionalism, set against a clean background suitable for a technology solutions dashboard">
+            </div>
+            <h3>Awais Nawaz</h3>
+            <p>IT Solutions Architect & Technical Lead</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#hero" onclick="closeNav()"><i class="fas fa-home"></i> Home</a>
+            <a href="#services" onclick="closeNav()"><i class="fas fa-cogs"></i> Our Services</a>
+            <a href="#projects" onclick="closeNav()"><i class="fas fa-project-diagram"></i> Our projects</a> <!-- Changed text -->
+            <a href="#testimonials" onclick="closeNav()"><i class="fas fa-comments"></i> Client Reviews</a> <!-- Changed text -->
+            <a href="#contact" onclick="closeNav()"><i class="fas fa-envelope"></i> Contact Us</a>
+            <a href="../index.html"  closeNav(); return false;"><i class="fas fa-external-link-alt"></i> My External Portfolio</a> <!-- New link -->
+            <a href="#" onclick="alert('Blog/Insights coming soon!'); closeNav(); return false;"><i class="fas fa-blog"></i> Blog & Insights</a>
+        </nav>
+    </div>
+
+    <!-- Overlay for when sidebar is open -->
+    <div class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+
+
+        <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center">
+  <div class="hero-animation-container">
+    <canvas id="three-js-canvas"></canvas>
+  </div>
+  <div class="container hero-content">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="display-4 fw-bold mb-4">
+          Turning Vision into <em class="text-primary">Digital Reality</em>
+        </h1>
+        <p class="lead mb-4">
+          At <strong>UfaqTech</strong>, we craft intelligent web, mobile, and e-commerce solutions that combine sleek design with future-ready technology. Every project we deliver is a reflection of our passion for innovation and quality.
+        </p>
+        <p class="lead mb-4">
+          Our dashboard showcases real-world demos — built to impress, built to perform.
+        </p>
+        <p class="text-muted fst-italic mb-5">
+          Awais Nawaz – Founder & IT Solutions Architect, UfaqTech
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#projects" class="btn btn-primary btn-lg shadow-sm">
+            🔍 View Our Work
+          </a>
+          <a href="#contact" class="btn btn-outline-primary btn-lg shadow-sm">
+            🤝 Let's Build Something Great
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h6>Our Expertise</h6>
+                    <h4>Strategic <em>Digital Services</em></h4>
+                    <div class="line-dec mx-auto"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                            <h5>Full-Stack Web Development</h5>
+                            <p>Architecting scalable, secure, and high-performance web applications with modern frameworks and robust backend systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h5>Cross-Platform Mobile Development</h5>
+                            <p>Developing intuitive and engaging mobile applications for iOS and Android, ensuring seamless user experiences across devices.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                            <h5>Intuitive UI/UX Design</h5>
+                            <p>Crafting visually stunning and highly functional user interfaces, prioritizing user experience and conversion optimization.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h5>Advanced E-commerce Solutions</h5>
+                            <p>Building secure, high-converting online stores with custom features and scalable architectures to maximize your revenue potential.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-cloud"></i></div>
+                            <h5>Cloud Infrastructure & DevOps</h5>
+                            <p>Designing and implementing robust cloud architectures and streamlined DevOps pipelines for continuous integration and deployment.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="fas fa-chart-line"></i></div>
+                            <h5>Data Analytics & AI Integration</h5>
+                            <p>Leveraging data-driven insights and integrating intelligent AI solutions to optimize performance and inform strategic decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+       <section id="projects" class="section-padding bg-white">
+  <div class="container">
+    <div class="section-heading text-center mb-5">
+      <h6>Our latest projects</h6>
+      <h4>Showcasing <em>Innovative Projects</em></h4>
+      <div class="line-dec mx-auto"></div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-dark filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="web">Websites</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="mobile">Mobile Apps</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="ecommerce">E-commerce</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="ai">AI Solutions</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="dashboard">Dashboards</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4 project-grid">
+      <!-- Example Project with multiple tags -->
+      <div class="col-lg-4 col-md-6 project-item" data-category="web">
+        <div class="project-card">
+          <img src="../assets/images/portfolio.jpg" alt="Project Alpha">
+          <div class="card-body">
+            <h5>Professional portfolio</h5>
+            <p class="category">Web Development</p>
+            <div class="project-buttons">
+              <a href="../index.html" class="btn btn-primary">Preview</a>
+              <a href="https://github.com/UfaqTech" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
+        <div class="project-card">
+          <img src="https://placehold.co/600x400/e8f5d9/2ecc71?text=Project+Beta" alt="Project Beta">
+          <div class="card-body">
+            <h5>Fitness & Wellness Mobile App</h5>
+            <p class="category">Mobile App Development</p>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-category="web ecommerce">
+        <div class="project-card">
+          <img src="https://placehold.co/600x400/f5e8d9/e67e22?text=Project+Gamma" alt="Project Gamma">
+          <div class="card-body">
+            <h5>Luxury E-commerce Platform</h5>
+            <p class="category">UI/UX Design, E-commerce</p>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-category="web ai">
+        <div class="project-card">
+          <img src="https://placehold.co/600x400/d9e8f5/3498db?text=Project+Delta" alt="Project Delta">
+          <div class="card-body">
+            <h5>Intelligent AI Chatbot Solution</h5>
+            <p class="category">AI Solutions</p>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-category="dashboard">
+        <div class="project-card">
+          <img src="https://placehold.co/600x400/e8f5d9/2ecc71?text=Project+Epsilon" alt="Project Epsilon">
+          <div class="card-body">
+            <h5>Real-time Analytics Dashboard</h5>
+            <p class="category">Data Visualization</p>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-category="mobile ecommerce">
+        <div class="project-card">
+          <img src="https://placehold.co/600x400/f5e8d9/e67e22?text=Project+Zeta" alt="Project Zeta">
+          <div class="card-body">
+            <h5>Restaurant Ordering System</h5>
+            <p class="category">E-commerce, Mobile</p>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-outline-primary">Download Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Testimonials Section -->                                                                  
+<section id="testimonials" class="section-padding bg-light">
+  <div class="container">
+    <div class="section-heading text-center mb-5">
+      <h6>Client Feedback</h6>
+      <h4>What <em>Our Clients Say</em></h4>
+      <div class="line-dec mx-auto"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Testimonial 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card p-4 shadow rounded bg-white">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://via.placeholder.com/50" alt="Client Logo" class="me-3 rounded-circle" />
+            <div>
+              <strong>John Doe</strong><br />
+              <small class="text-muted">CEO – Innovate Corp</small>
+            </div>
+          </div>
+          <p class="quote mb-3">"UfaqTech transformed our online presence. Their web development expertise is unmatched, and they delivered exactly what we envisioned, on time and within budget."</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-warning">
+              <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+            </div>
+            <div class="text-muted small">
+              <i class="ti-thumb-up"></i> 132 &nbsp; <i class="ti-comment"></i> 12
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card p-4 shadow rounded bg-white">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://via.placeholder.com/50" alt="Client Logo" class="me-3 rounded-circle" />
+            <div>
+              <strong>Jane Smith</strong><br />
+              <small class="text-muted">Marketing Director – Growth Co.</small>
+            </div>
+          </div>
+          <p class="quote mb-3">"The mobile app developed by Awais and his team is fantastic. User-friendly and robust, it has significantly improved our customer engagement."</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-warning">
+              <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+            </div>
+            <div class="text-muted small">
+              <i class="ti-thumb-up"></i> 87 &nbsp; <i class="ti-comment"></i> 9
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card p-4 shadow rounded bg-white">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://via.placeholder.com/50" alt="Client Logo" class="me-3 rounded-circle" />
+            <div>
+              <strong>Emily White</strong><br />
+              <small class="text-muted">Product Manager – DataFlow Inc.</small>
+            </div>
+          </div>
+          <p class="quote mb-3">"Their UI/UX design work is exceptional. Our new dashboard is not only beautiful but also incredibly intuitive, making our daily operations much smoother."</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-warning">
+              <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+            </div>
+            <div class="text-muted small">
+              <i class="ti-thumb-up"></i> 105 &nbsp; <i class="ti-comment"></i> 6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-white">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h6>Get in Touch</h6>
+                    <h4>Let's Build <em>Something Amazing</em></h4>
+                    <div class="line-dec mx-auto"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contact-form-container">
+                           <form id="contact-form" action="https://formsubmit.co/mawais03415942806@gmail.com" method="POST">
+  <!-- FormSubmit hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://ufaqtech.github.io/#contact">
+  <input type="text" name="_honey" style="display: none">
+
+  <div class="mb-3">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+  </div>
+  <div class="mb-3">
+    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+  </div>
+  <div class="mb-3">
+    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+  </div>
+  <div class="mb-3">
+    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+  </div>
+
+  <!-- Success message -->
+  <div id="success-message" class="alert alert-success mt-3" style="display: none;">
+    ✅ Message sent successfully!
+  </div>
+</form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>Copyright © 2025 UfaqTech. All Rights Reserved.
+                    <br>Designed & Developed by: <a href="#" title="">Awais Nawaz</a>
+                </p>
+            </div>
+        </footer>
+
+    </div> <!-- End of main-content wrapper -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for simple interactions like form submit -->
+
+    <script src="/assets/js/dashboard.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+/* Custom CSS for UHT-Framework Website */
+
+/* General Body Styling */
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* Apply a subtle background gradient animation */
+    background: linear-gradient(135deg, #1a202c, #2d3748, #1a202c);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Keyframes for gradient background animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animations for elements appearing on scroll */
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in-up animation to elements with this class */
+.animate-fade-in-up {
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+}
+
+/* Animation delays for staggered effects */
+.animate-fade-in-up.delay-50 { animation-delay: 0.05s; }
+.animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+.animate-fade-in-up.delay-150 { animation-delay: 0.15s; }
+.animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in-up.delay-250 { animation-delay: 0.25s; }
+.animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+.animate-fade-in-up.delay-350 { animation-delay: 0.35s; }
+.animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+.animate-fade-in-up.delay-450 { animation-delay: 0.45s; }
+.animate-fade-in-up.delay-500 { animation-delay: 0.5s; }
+.animate-fade-in-up.delay-550 { animation-delay: 0.55s; }
+.animate-fade-in-up.delay-600 { animation-delay: 0.6s; }
+.animate-fade-in-up.delay-650 { animation-delay: 0.65s; }
+.animate-fade-in-up.delay-700 { animation-delay: 0.7s; }
+.animate-fade-in-up.delay-800 { animation-delay: 0.8s; }
+.animate-fade-in-up.delay-900 { animation-delay: 0.9s; }
+.animate-fade-in-up.delay-1000 { animation-delay: 1.0s; }
+.animate-fade-in-up.delay-1100 { animation-delay: 1.1s; }
+.animate-fade-in-up.delay-1200 { animation-delay: 1.2s; }
+
+
+/* Text Reveal Animation for Hero Heading */
+@keyframes textClip {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.animate-text-reveal {
+    opacity: 0;
+    animation: textClip 1.5s ease-out forwards;
+    /* Apply a slight upward movement with the reveal */
+    transform: translateY(20px);
+    animation-name: textClip, fadeInUp;
+    animation-duration: 1.5s, 0.8s;
+    animation-delay: 0s, 0s; /* Text reveal starts immediately */
+    animation-timing-function: ease-out, ease-out;
+    animation-fill-mode: forwards, forwards;
+}
+
+
+/* Card Entry Animation */
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-card-entry {
+    opacity: 0;
+    animation: cardEntry 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; /* Bounce effect */
+}
+
+/* Staggered delays for card entry animations */
+.animate-card-entry.delay-100 { animation-delay: 0.1s; }
+.animate-card-entry.delay-200 { animation-delay: 0.2s; }
+.animate-card-entry.delay-300 { animation-delay: 0.3s; }
+.animate-card-entry.delay-400 { animation-delay: 0.4s; }
+.animate-card-entry.delay-500 { animation-delay: 0.5s; }
+.animate-card-entry.delay-600 { animation-delay: 0.6s; }
+.animate-card-entry.delay-700 { animation-delay: 0.7s; }
+.animate-card-entry.delay-800 { animation-delay: 0.8s; }
+.animate-card-entry.delay-900 { animation-delay: 0.9s; }
+.animate-card-entry.delay-1000 { animation-delay: 1.0s; }
+.animate-card-entry.delay-1100 { animation-delay: 1.1s; }
+.animate-card-entry.delay-1200 { animation-delay: 1.2s; }
+
+
+/* Header and Navigation Styling */
+header {
+    border-radius: 0 0 1rem 1rem; /* rounded-b-xl */
+}
+
+/* Feature Card Hover Effect */
+.feature-card, .tool-card, .tool-detail-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.feature-card:hover, .tool-card:hover, .tool-detail-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); /* Teal glow effect */
+}
+
+/* Three.js Background Canvas Styling */
+#three-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    pointer-events: none;
+}
+
+/* Ensure sections take up at least full viewport height for better presentation */
+#home {
+    min-height: 100vh;
+}
+
+/* Adjust main content padding to avoid overlap with fixed header/footer */
+main {
+    padding-top: 6rem; /* Adjust based on header height */
+    padding-bottom: 6rem; /* Adjust based on footer height */
+}
+
+/* Specific styling for social icons on hover */
+.social-icon-hover:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6)); /* Add a glow effect */
+}
+
+.fa-facebook:hover { color: #1877F2; }
+.fa-twitter:hover { color: #1DA1F2; }
+.fa-linkedin:hover { color: #0A66C2; }
+.fa-github:hover { color: #ffffff; } /* White for GitHub */
+.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-tiktok:hover { color: #69C9D0; }
+.fa-telegram:hover { color: #0088CC; }
+.fa-whatsapp:hover { color: #25D366; }
+
+/* Accordion specific styles */
+.accordion-header {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on click */
+}
+
+.accordion-content {
+    /* max-height is controlled by JS for smooth transition */
+    transition: max-height 0.5s ease-in-out, padding-top 0.5s ease-in-out;
+}
+
+.accordion-icon {
+    transform: rotate(0deg);
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile Navigation Overlay */
+#mobile-nav-overlay {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 3rem; /* Adjust hero title size for mobile */
+    }
+    .text-7xl {
+        font-size: 4rem; /* Adjust hero title size for mobile */
+    }
+    .text-xl {
+        font-size: 1.125rem; /* Adjust paragraph size for mobile */
+    }
+    .text-2xl {
+        font-size: 1.5rem; /* Adjust feature/tool title size for mobile */
+    }
+    .feature-card, .tool-card, .tool-detail-card {
+        padding: 1.5rem; /* Adjust padding for cards on mobile */
+    }
+    /* Hide desktop nav on mobile */
+    nav ul.hidden {
+        display: none;
+    }
+    /* Show mobile menu button */
+    #mobile-menu-button {
+        display: block;
+    }
+    /* Mobile nav links styling */
+    #mobile-nav-overlay ul {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center;
+        margin-top: 1rem;
+        width: 30%;
+    }
+    #mobile-nav-overlay ul li {
+        margin-bottom: 0.5rem;
+    }
+}
