@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ufaqtech.github.io/</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://ufaqtech.github.io/demo/demo.html</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ufaqtech.github.io/assets/imgs/Awais_resume.pdf</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ufaqtech.github.io/demo/homepage_1.html</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://ufaqtech.github.io/demo/homepage_2.html</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://ufaqtech.github.io/demo/homepage_3.html</loc>
-    <lastmod>2025-07-08</lastmod>
-    <priority>0.64</priority>
-  </url>
+ 
+<url>
+  <loc>https://ufaqtech.github.io/</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/assets/images/Awais%E2%80%99s%20resume.pdf</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/uth_faramework/index.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/homepage_1.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/Gen_font/font.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/homepage_2.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/UTH/UHT.Html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/homepage_3.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/pages/dashboard.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ufaqtech.github.io/index.html</loc>
+  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
