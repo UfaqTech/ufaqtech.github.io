@@ -4676,33 +4676,44 @@ input[type="button"].btn-block {
   font-weight: 500;
   padding: 10px 14px;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   transition: color 0.3s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon styling */
+.navbar-nav .nav-link i {
+  transition: color 0.3s ease;
+  color: #333;
+}
+
+/* Bottom line animation */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #F85C70;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
   z-index: 1;
 }
 
-/* Border ring */
-.navbar-nav .nav-link::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 2px solid #F85C70;  /* Ring color */
-  border-radius: 50px;         /* Rounded ring, can set to 0 for square */
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
-  z-index: -1;
-}
-
-/* On hover: draw the ring */
-.navbar-nav .nav-link:hover::before {
-  width: 100%;
-  height: 100%;
+/* On hover: animate the bottom line */
+.navbar-nav .nav-link:hover::after {
+  width: 50%;
 }
 
 .navbar-nav .nav-link:hover {
+  color: #F85C70;
+}
+
+.navbar-nav .nav-link:hover i {
   color: #F85C70;
 }
 
@@ -11923,19 +11934,6 @@ pre .code {
 }
 
 
-.header {
-  position: relative;
-  height: 80vh;
-  min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #fff;
-}
-
 
 /* Globe background glow */
 #glob {
@@ -12089,11 +12087,26 @@ pre .code {
     height: 100%;
 }
 
+
+.header {
+  position: relative;
+  height: 51vh;
+  min-height: 420px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+
 .header .header-content {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 55%;
+    top: 45%;
     transform: translateY(-50%);
     color: #fff;
     opacity: 0;
@@ -12111,9 +12124,9 @@ pre .code {
 }
 
 .header .header-content .header-title {
-    font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(40px + (120 - 40) * ((40vw - 300px) / (1400 - 300)));
     font-weight: bold;
-    line-height: .7;
+    line-height: .8;
     margin-bottom: 25px;
     color: inherit;
     /* Styles for the typing animation */
