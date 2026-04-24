@@ -12092,8 +12092,8 @@ pre .code {
   position: relative;
   height: 51vh;
   min-height: 420px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/header.png);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/header.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12157,6 +12157,29 @@ pre .code {
     animation: headerSocialFadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) 1.4s forwards;
 }
 
+.container-fluid .social-icons{
+
+   list-style: none;
+  padding-left: 0;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  max-width: 100px; /* ⬅️ Container width reduced */
+  margin: 30px auto;
+}
+
+.contact-info-card .social-icons {
+  list-style: none;
+  padding-left: 0;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  max-width: 100px; /* ⬅️ Container width reduced */
+  margin: 30px auto;
+}
+
 /* Hover Effects and Media Queries */
 /* Removed empty .header .header-content .header-title:hover ruleset as neonGlow is continuous */
 
@@ -12167,14 +12190,20 @@ pre .code {
     }
     .header .social-icons {
         margin: auto;
+        
     }
     .header .header-content {
         padding: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .header .header-content .header-mono {
         letter-spacing: 2px;
     }
 }
+
+
+
 /* About Section Styles (without animations) */
 .about-section {
     padding: 80px 0;
