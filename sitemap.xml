@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
- 
-<url>
-  <loc>https://ufaqtech.github.io/</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/assets/images/Awais%E2%80%99s%20resume.pdf</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/UHT-Framework</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V1</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/Gen_font</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V2</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/UHT</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V3</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/Case-Study</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://ufaqtech.github.io/index.html</loc>
-  <lastmod>2025-10-22T15:14:01+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://ufaqtech.github.io/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Portfolio Projects -->
+  <url>
+    <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ufaqtech.github.io/UfaqTech-Digital-Inteligence-V3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ufaqtech.github.io/Case-Study/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Tools & Frameworks -->
+  <url>
+    <loc>https://ufaqtech.github.io/UHT-Framework/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ufaqtech.github.io/UHT/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ufaqtech.github.io/Gen_font/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
