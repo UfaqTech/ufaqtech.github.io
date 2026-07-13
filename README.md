@@ -18,7 +18,7 @@
 - 💬 Love solving real-world problems with code and collaboration  
 - 🌱 Currently learning: **Advanced React Patterns, AI Tools, Backend Scaling**  
 - 🎯 2025 Goals: Build SaaS apps, learn DevOps basics, contribute to 10+ open-source projects  
-- 📬 Reach me at: [mawais03415942806@gmail.com](mailto:mawais03415942806@gmail.com)
+- 📬 Reach me at: [ufaqtech.global@gmail.com](mailto:ufaqtech.global@gmail.com)
 
 ---
 
@@ -75,7 +75,7 @@
 
 [![👨‍💻 GitHub Profile](https://img.shields.io/badge/-GitHub%20Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/UfaqTech)
 
-[![📫 Contact Me](https://img.shields.io/badge/-Contact%20Me-E4405F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mawais03415942806@gmail.com)
+[![📫 Contact Me](https://img.shields.io/badge/-Contact%20Me-E4405F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ufaqtech.global@gmail.com)
 
 </div>
 
@@ -108,14 +108,14 @@
 
 <p align="center">
   <a href="https://www.facebook.com/xtylish.awais.9862" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"></a>
-  <a href="https://x.com/Ufaq_Tech?t=coGIyCC-qK84X1S7cN8Q2A&s=09" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
-  <a href="https://www.linkedin.com/in/awais-nawaz-52b643315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/Ufaq_Tech" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
+  <a href="https://www.linkedin.com/in/ufaqtech" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://github.com/UfaqTech" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://www.instagram.com/xtylish.awais.9862?igsh=YzljYTk1ODg3Zg==" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.instagram.com/ufaqtech="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
   <a href="https://t.me/UfaqTech" target="_blank"><img src="https://img.shields.io/badge/Telegram-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
   <a href="https://whatsapp.com/channel/0029VaDLtSi2phHOBp9XyN03" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
-  <a href="mailto:mawais03415942806@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://www.tiktok.com/@talash_e__khudi?_t=ZS-8xywi3g4V1u&_r=1" target="_blank"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
+  <a href="mailto:ufaqtech.global@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://www.tiktok.com/@ufaqtech" target="_blank"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a>
   <a href="https://dev.to/ufaqtech" target="_blank"><img src="https://img.shields.io/badge/DEV.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" alt="DEV.to"></a>
 </p>
 
@@ -123,17 +123,12 @@
 
 ## 🤝 Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/awais-nawaz-52b643315)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ufaqtech)
 [![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/Ufaq_Tech)
 [![Telegram](https://img.shields.io/badge/-Telegram-0088cc?style=flat&logo=telegram&logoColor=white)](https://t.me/UfaqTech)
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/UfaqTech)
-
-
-
-
-
--->`Awais Nawaz informtion Technologiest`, `UfaqTech Open-Source Projects`, `Awais Nawaz Ethical Hacking`, `UfaqTech Security Tools`, `Awais Nawaz GitHub`, `Awais Nawaz Developer`, `UfaqTech Developer`, `Awais Nawaz Portfolio`, `UfaqTech Projects`, `Awais Nawaz Coding`, `UfaqTech Programming`, `Awais Nawaz Web Developer`, `UfaqTech Software Development`, `Awais Nawaz Full Stack Developer`, `UfaqTech Ethical Hacking`, `Awais Nawaz UI/UX Designer`, `UfaqTech Security Research`, `Awais Nawaz React Developer`, `UfaqTech Cybersecurity`, `Awais Nawaz Open Source`, `UfaqTech GitHub`, `Awais Nawaz Python Developer`, `UfaqTech Tools`, `Awais Nawaz IT Professional`, `UfaqTech Innovations`, `Awais Nawaz Security Expert`, `UfaqTech Developer Community`, `Awais Nawaz GitHub Portfolio`, `UfaqTech Web Development`, `Awais Nawaz Projects`, `UfaqTech Full Stack`, `Awais Nawaz Programming`, `UfaqTech Technology`, `Awais Nawaz Security Engineer`, `UfaqTech Coding`, `Awais Nawaz Software Engineer`, `UfaqTech Digital Solutions`, `Awais Nawaz Ethical Hacker`, `UfaqTech Tech Solutions`, `Awais Nawaz Tech Portfolio`, `UfaqTech Developer Hub`<!--[![Portfolio](https://img.shields.io/badge/-Portfolio-0a192f?style=flat&logo=Google-Chrome&logoColor=white)](https://ufaqtech.github.io/)
-[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:mawais03415942806@gmail.com)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-0a192f?style=flat&logo=Google-Chrome&logoColor=white)](https://ufaqtech.github.io/)
+[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:ufaqtech.global@gmail.com)
 ---
 
 <p align="center">💡 "Code is not just syntax. It's the art of solving problems efficiently."</p>
